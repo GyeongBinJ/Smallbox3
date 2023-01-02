@@ -79,7 +79,13 @@
 }
 .select_seat {
 	float: left;
-
+    margin-right: 20px;
+}
+.payButton {
+	width: 100px;
+	height: 50px;
+	font-size: 15px;
+	font-weight: bold;
 }
 </style>
 <script src="../js/jquery-3.6.3.js"></script>
@@ -90,7 +96,7 @@
 		    if (e.currentTarget == btn) {
 		      btn.classList.add("active");
 		      alert($(".select_person.active").val());
-// 				$("input[name=selected_time]").val($(".timeButton").val());
+				$("input[name=selected_person]").val($(".select_person.active").val());
 		    } else {
 		      btn.classList.remove("active");
 		    }
@@ -182,10 +188,21 @@
             <div class="selected-list">
 		        ${param.movie_title } <br>
 				${param.reserved_date } <br>
-				${param.selected_time }
-	
+				${param.selected_time } <br>
+				쿠폰: 
+			<div class="selected_pay_result">
+			<!-- ajax를 이용하여 인원당 가격의 값을 pay 테이블에서 불러온다 -->
+			
+			</div>	
+		<!-- 선택한 영화 제목, 상영날짜, 상영 시간 값을 폼 파라미터로 넘김 -->		
+			<input type="hidden" name="movie_title" value="${param.movie_title }">	
+			<input type="hidden" name="theater_date" value="${param.reserved_date }">	
+			<input type="hidden" name="theater_time" value="${param.selected_time }">	
+			<input type="hidden" name="selected_adult" value="0">	
+			<input type="hidden" name="selected_teen" value="0">	
+			<input type="hidden" name="selected_elderly" value="0">	
 	         </div>
-	        <input type="submit" value="결제하기" class="movie-date-wrapper">
+	        <input type="submit" value="결제하기" class="payButton">
         </div>
     </form>
     </div>
