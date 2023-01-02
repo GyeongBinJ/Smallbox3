@@ -84,50 +84,6 @@
 </style>
 <script src="../js/jquery-3.6.3.js"></script>
 <script type="text/javascript">
-	var locked = 0;
-	var image;
-	var el;
-	
-	function mouseover(star) {
-		if (locked==1)
-			return;
-		
-			image = 'image' + star;
-			el = document.getElementById(image);
-			el.src = "../image/seat1.jpg";
-			
-	} // ~~~~function mouseover end~~~~
-	
-	function mouseout(star) {
-		if (locked==1)
-			return;
-		
-			image = 'image'+star;
-			el = document.getElementById(image);
-			el.src = "../image/seat0.png";
-		
-	} // ~~~~function mouseout end~~~~
-		
-	function lock(star) {
-		mouseover(star);
-		locked=1;
-	}  // ~~~~function lock end~~~~
-	
-	function onClk(star) {
-		lock(star);
-// 		alert("좌석 : " + star);
-		document.seatForm.star.value=star;
-
-		var strstar = star.toString();
-		var line = strstar.substr(0, 1); 
-		var seatno = strstar.substr(-2, 2); 
-		
-// 		alert("선택한 좌석 열 : " + line);
-// 		alert("선택한 좌석 번호 : " + seatno);
-		
-		document.querySelector("#seatresult").innerHTML = "line : " + line + ", seatno : " + seatno;
-	} // ~~~~function onClk end~~~~
-		
 	 function change_btn(e) {
 		  var btns = document.querySelectorAll(".select_person");
 		  btns.forEach(function (btn, i) {
@@ -234,22 +190,7 @@
     </form>
     </div>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 </body>
 </html>
