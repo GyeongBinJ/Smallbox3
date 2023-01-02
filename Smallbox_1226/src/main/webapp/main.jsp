@@ -21,7 +21,7 @@
 	</header>
 	<article>
 		<h1>SMALL BOX</h1>
-		<h3>열심히 공부할 준비 되셨나요 ~ </h3>
+		<h3>열심히 공부할 준비 되셨나요</h3>
 		<a href="MovieList.mv">영화 목록</a><br>
 		<a href="Reserve.mv">예매</a><br>
 		<a href="Admin_main.ad">관리자</a>
