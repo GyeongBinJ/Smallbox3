@@ -2,30 +2,27 @@ package svc;
 
 import java.sql.Connection;
 
-import dao.MovieDAO;
+import dao.CommentDAO;
 import db.JdbcUtil;
-import vo.MovieBean;
 
-public class MovieDetailService {
+public class CommentStarAverageService {
 
-	public MovieBean getMovieDetail(int movie_idx) {
-		System.out.println("service : MovieDetailService");
-	
-		MovieBean movie = null;
-
+	public double getStarAverage(int movie_idx) {
+		double starAvg = 0;
+		
 		//-------------------공통------------------------------
 		Connection con = JdbcUtil.getConnection();
-		MovieDAO dao = MovieDAO.getInstance();
+		CommentDAO dao = CommentDAO.getInstance();
 		dao.setConnection(con);
 		//-----------------------------------------------------
-		
-		movie = dao.selectMovie(movie_idx);
 				
+		starAvg = dao.selectAvg(movie_idx);
+		
 		//-------------------공통------------------------------
 		JdbcUtil.close(con);
 		//-----------------------------------------------------
-				
-		return movie;
+		
+		return starAvg;
 	}
 
 }
