@@ -9,9 +9,9 @@ import vo.MemberBean;
 public class MemberJoinProService {
 
 	public boolean joinMember(MemberBean member) {
-		System.out.println("MemberJoinProService - joinMember()");
+		System.out.println("BoardJoinProService - joinMember()");
 				
-			boolean isJoinSuccess = false;
+			boolean isJoinSeuccess = false;
 			
 			Connection con = JdbcUtil.getConnection();
 			
@@ -19,13 +19,12 @@ public class MemberJoinProService {
 			
 			dao.setConnection(con);
 			
-			
 			int insertCount = dao.insertMember(member);
-//			System.out.println(insertCount);
+			
 			if(insertCount > 0) {
 				JdbcUtil.commit(con);
 				
-				isJoinSuccess = true;
+				isJoinSeuccess = true;
 			} else {
 				JdbcUtil.rollback(con);
 			}
@@ -33,7 +32,7 @@ public class MemberJoinProService {
 			JdbcUtil.close(con);
 			
 			// 작업결과 리턴
-			return isJoinSuccess; 
+			return isJoinSeuccess; 
 		}
 	}
 

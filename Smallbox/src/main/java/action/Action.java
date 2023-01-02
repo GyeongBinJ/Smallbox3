@@ -14,7 +14,5 @@ public interface Action {
 	// => 파라미터 : HttpServletRequest(request), HttpServletRespose(response) 객체
 	// => 리턴타입 : ActionForward
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response);
-
-//	ActionForward execute(HttpServletRequest request, HttpServletResponse response, String member_id);
 	
 }

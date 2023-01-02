@@ -13,6 +13,7 @@ public class MemberBean {
 	private String member_phone;
 	private Date member_join_date;
 	private Date member_birth_date;
+	private String member_point;
 	
 	public int getMember_idx() {
 		return member_idx;
@@ -62,16 +63,26 @@ public class MemberBean {
 	public void setMember_birth_date(Date member_birth_date) {
 		this.member_birth_date = member_birth_date;
 	}
+	public String getMember_point() {
+		return member_point;
+	}
+	public void setMember_point(String member_point) {
+		this.member_point = member_point;
+	}
 	@Override
 	public String toString() {
 		return "MemberDTO [member_idx=" + member_idx + ", member_name=" + member_name + ", member_id=" + member_id
 				+ ", member_passwd=" + member_passwd + ", member_email=" + member_email + ", member_phone="
 				+ member_phone + ", member_join_date=" + member_join_date + ", member_birth_date=" + member_birth_date
-				+ "]";
+				+ ", member_point=" + member_point + "]";
 	}
-
-
-
-}
-		
 	
+	
+	
+	
+	
+	
+	
+	
+	
+}

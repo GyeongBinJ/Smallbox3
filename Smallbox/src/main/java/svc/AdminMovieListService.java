@@ -40,4 +40,5 @@ public class AdminMovieListService {
 		
 		return listCount;
 	}
+
 }

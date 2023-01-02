@@ -1,1415 +1,665 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <title>스몰박스</title>
 
-    <!-- css -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/swiper.css">
-    
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href="assets/icons/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
-    
-    <!-- 웹 폰트 -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;subset=korean" rel="stylesheet">
-    
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+<!-- ----------------------------------------들고다니세요-------------------------------------------------------------------------- -->
+<!-- css -->
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/swiper.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<link href="assets/css/style.css" rel="stylesheet">
+<!-- ----------------------------------------들고다니세요-------------------------------------------------------------------------- -->  
+
+<title>Green Bootstrap Template - Index</title>
 </head>
+
 <body>
-    <header id="header">
+
+   <header id="header">
     	<jsp:include page="inc/top.jsp"></jsp:include>
     </header>
-    <!-- //header -->
-    
-    <section id="banner">
-        <div class="banner_menu">
-            <h2 class="ir_so">배너 영역</h2>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(assets/img/slide/avatar.jpeg)">
+          <div class="carousel-container">
             <div class="container">
-                <div class="row">
-                    <div class="bm_left">
-                        <ul>
-                            <li class="total"><a href="#">전체메뉴</a></li>
-                            <li class="line"><a href="#">필름 소사이어티</a></li>
-                            <li><a href="#">클래식 소사이어티</a></li>
-                        </ul>
-                    </div>
-                    <div class="bm_right">
-                        <ul>
-                            <li class="line"><a href="custom/faq.html">고객센터</a></li>
-                            <li class="line"><a href="#">멤버쉽</a></li>
-                            <li><a href="#">VIP</a></li>
-                        </ul>
-                        <ul>
-                            <li class="white"><a href="#">상영시간표</a></li>
-                            <li class="purple"><a href="#">빠른예매</a></li>
-                        </ul>
-                    </div>
-                </div>
+              <h2 class="animate__animated animate__fadeInDown">아바타 - 물의길 (4D)</h2>
+              <p class="animate__animated animate__fadeInUp">
+              	판도라 행성에서 '제이크 설리'와 '네이티리'가 이룬 가족이 겪게 되는 무자비한 위협과 살아남기 위해 떠나야 하는 긴 여정과 전투, 
+              	그리고 견뎌내야 할 상처에 대한 이야기를 그렸다. 월드와이드 역대 흥행 순위 1위를 기록한 전편 "아바타"에 이어 
+              	제임스 카메론 감독이 13년만에 선보이는 영화로, 샘 워싱턴, 조 샐다나, 시고니 위버, 스티븐 랭, 케이트 윈슬렛이 출연하고 존 랜도가 프로듀싱을 맡았다.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">예매하기</a>
             </div>
+          </div>
         </div>
-        <div class="slider">
-           <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide ss1">
-                        <div class="container">
-                            <div class="row">
-                                <h3>어벤져스 : 앤드게임</h3>
-                                <p>역대 최단 기간 1000만 관객 돌파 기록 </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide ss2">
-                        <div class="container">
-                            <div class="row">
-                                <h3>어벤져스 : 앤드게임</h3>
-                                <p>역대 최단 기간 1000만 관객 돌파 기록 </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide ss3">
-                        <div class="container">
-                            <div class="row">
-                                <h3>어벤져스 : 앤드게임</h3>
-                                <p>역대 최단 기간 1000만 관객 돌파 기록 </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-    </section>
-    <!-- //banner -->
-    
-    
-    <section id="movie">
-        <div class="container">
-            <div class="row">
-                <h2 class="ir_so">영화 예매</h2>
-                <div class="movie">
-                    <div class="movie_title">
-                        <ul class="clearfix">
-                            <li class="active"><a href="#">박스오피스</a></li>
-                            <li><a href="#">최신개봉작</a></li>
-                            <li><a href="#">상영예정작</a></li>
-                            <li><a href="#">큐레이션</a></li>
-                        </ul>
-                    </div>
-                    <div class="movie_chart">
-                        <div class="swiper-container2">
-                           <div class="chart_cont1 swiper-wrapper">
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="assets/img/poster01.jpg" srcset="assets/img/poster01@2.jpg 2x" alt="침묵">
-                                       </figure>
-                                       <div class="rank"><strong>1</strong></div>
-                                       <div class="mx">
-                                           <span class="icon m ir_pm">MX</span>
-                                           <span class="icon b ir_pm">Boutique</span>
-                                       </div>
-                                   </div>
-                                   <div class="infor">
-                                       <h3><span class="icon all ir_pm">전체관람가</span> <strong>침묵</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">예매하기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="assets/img/poster02.jpg" srcset="assets/img/poster02@2.jpg 2x" alt="신세계">
-                                       </figure>
-                                       <div class="rank"><strong>2</strong></div>
-                                       <div class="mx">
-                                           <span class="icon m ir_pm">MX</span>
-                                       </div>
-                                   </div>
-                                   <div class="infor">
-                                       <h3><span class="icon a19 ir_pm">19세 이상 관람</span> <strong>신세계</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">예매하기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="assets/img/poster03.jpg" srcset="assets/img/poster03@2.jpg 2x" alt="마스터">
-                                       </figure>
-                                       <div class="rank"><strong>3</strong></div>
-                                       <div class="mx">
-                                           <span class="icon m ir_pm">MX</span>
-                                       </div>
-                                   </div>
-                                   <div class="infor">
-                                       <h3><span class="icon a12 ir_pm">12세 이상 관람</span> <strong>마스터</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">예매하기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="assets/img/poster04.jpg" srcset="assets/img/poster04@2.jpg 2x" alt="마약왕">
-                                       </figure>
-                                       <div class="rank"><strong>4</strong></div>
-                                       <div class="mx">
-                                           <span class="icon m ir_pm">MX</span>
-                                       </div>
-                                   </div>
-                                   <div class="infor">
-                                       <h3><span class="icon a15 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">예매하기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="assets/img/poster05.jpg" srcset="assets/img/poster05@2.jpg 2x" alt="마약왕">
-                                       </figure>
-                                       <div class="rank"><strong>5</strong></div>
-                                       <div class="mx">
-                                           <span class="icon m ir_pm">MX</span>
-                                       </div>
-                                   </div>
-                                   <div class="infor">
-                                       <h3><span class="icon a15 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">예매하기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="assets/img/poster06.jpg" srcset="assets/img/poster06@2.jpg 2x" alt="마약왕">
-                                       </figure>
-                                       <div class="rank"><strong>6</strong></div>
-                                       <div class="mx">
-                                           <span class="icon m ir_pm">MX</span>
-                                       </div>
-                                   </div>
-                                   <div class="infor">
-                                       <h3><span class="icon a15 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">예매하기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="assets/img/poster07.jpg" srcset="assets/img/poster07@2.jpg 2x" alt="마약왕">
-                                       </figure>
-                                       <div class="rank"><strong>7</strong></div>
-                                       <div class="mx">
-                                           <span class="icon m ir_pm">MX</span>
-                                       </div>
-                                   </div>
-                                   <div class="infor">
-                                       <h3><span class="icon a15 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">예매하기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="assets/img/poster08.jpg" srcset="assets/img/poster08@2.jpg 2x" alt="마약왕">
-                                       </figure>
-                                       <div class="rank"><strong>8</strong></div>
-                                       <div class="mx">
-                                           <span class="icon m ir_pm">MX</span>
-                                       </div>
-                                   </div>
-                                   <div class="infor">
-                                       <h3><span class="icon a15 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">예매하기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                        </div>
-                        <!-- //chart_cont1-->
-                        
-                        <div class="swiper-container2">
-                            <div class="chart_cont2 swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster07.jpg" srcset="assets/img/poster07@2.jpg 2x" alt="침묵">
-                                        </figure>
-                                        <div class="rank"><strong>1</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                            <span class="icon b ir_pm">Boutique</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon all ir_pm">전체관람가</span> <strong>침묵</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster08.jpg" srcset="assets/img/poster08@2.jpg 2x" alt="신세계">
-                                        </figure>
-                                        <div class="rank"><strong>2</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a19 ir_pm">19세 이상 관람</span> <strong>신세계</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster07.jpg" srcset="assets/img/poster07@2.jpg 2x" alt="마스터">
-                                        </figure>
-                                        <div class="rank"><strong>3</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a12 ir_pm">12세 이상 관람</span> <strong>마스터</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster08.jpg" srcset="assets/img/poster08@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a15 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster08.jpg" srcset="assets/img/poster08@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a15 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster08.jpg" srcset="assets/img/poster08@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a15 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //chart_cont2-->
-                        
-                        <div class="swiper-container2">
-                            <div class="chart_cont3 swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster09.jpg" srcset="assets/img/poster09@2.jpg 2x" alt="침묵">
-                                        </figure>
-                                        <div class="rank"><strong>1</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                            <span class="icon b ir_pm">Boutique</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon all ir_pm">전체관람가</span> <strong>침묵</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster01.jpg" srcset="assets/img/poster01@2.jpg 2x" alt="신세계">
-                                        </figure>
-                                        <div class="rank"><strong>2</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a12 ir_pm">19세 이상 관람</span> <strong>신세계</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster02.jpg" srcset="assets/img/poster02@2.jpg 2x" alt="마스터">
-                                        </figure>
-                                        <div class="rank"><strong>3</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a12 ir_pm">12세 이상 관람</span> <strong>마스터</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster03.jpg" srcset="assets/img/poster03@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a19 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster03.jpg" srcset="assets/img/poster03@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a19 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster03.jpg" srcset="assets/img/poster03@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a19 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //chart_cont3-->
-                        
-                        <div class="swiper-container2">
-                            <div class="chart_cont4 swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster04.jpg" srcset="assets/img/poster04@2.jpg 2x" alt="침묵">
-                                        </figure>
-                                        <div class="rank"><strong>1</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                            <span class="icon b ir_pm">Boutique</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon all ir_pm">전체관람가</span> <strong>침묵</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster05.jpg" srcset="assets/img/poster05@2.jpg 2x" alt="신세계">
-                                        </figure>
-                                        <div class="rank"><strong>2</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a19 ir_pm">19세 이상 관람</span> <strong>신세계</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster06.jpg" srcset="assets/img/poster06@2.jpg 2x" alt="마스터">
-                                        </figure>
-                                        <div class="rank"><strong>3</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a12 ir_pm">12세 이상 관람</span> <strong>마스터</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster07.jpg" srcset="assets/img/poster07@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a12 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster07.jpg" srcset="assets/img/poster07@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a12 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="assets/img/poster07.jpg" srcset="assets/img/poster07@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        <div class="rank"><strong>4</strong></div>
-                                        <div class="mx">
-                                            <span class="icon m ir_pm">MX</span>
-                                        </div>
-                                    </div>
-                                    <div class="infor">
-                                        <h3><span class="icon a12 ir_pm">15세 이상 관람</span> <strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">예매하기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //chart_cont4-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>  
-    <!-- //movie -->
-    
-    
-    <section id="event">
-        <div class="container">
-            <div class="row">
-                <div class="event">
-                    <h2><em>새로운 이벤트</em></h2>
-                    <div class="event_left">
-                        <div class="event_slider">
-                            <img src="assets/img/event01.jpg" srcset="assets/img/event01@2.jpg 2x" alt="시티 패키지">
-                        </div>
-                        <figure class="event_box1">
-                            <img src="assets/img/event02.jpg" srcset="assets/img/event02@2.jpg 2x" alt="남포항점 2019 시즌할인권">
-                        </figure>
-                        <figure class="event_box2">
-                            <img src="assets/img/event03.jpg" srcset="assets/img/event03@2.jpg 2x" alt="설 선물 이수점 전용 관람권 런칭">
-                        </figure>
-                    </div>
-                    <figure class="event_right">
-                        <img src="assets/img/event04.jpg" srcset="assets/img/event04@2.jpg 2x" alt="사표 대신 영화표">
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //event -->
-    
-    
-    <section id="opening">
-        <div class="container">
-            <div class="row">
-                <div class="opening">
-                    <h2><span class="icon grand ir_pm">Grand Opening</span></h2>
-                    <strong class="icon date ir_pm">2019.01 ~ 2019.03</strong>
-                    <p class="desc">LIFE THEATER로 새롭게 시작하는 메가박스를 만나보세요!</p>
-                    <div class="open_box">
-                        <div>
-                            <h3>리뉴얼 오픈</h3>
-                            <p><em>경기도</em><strong>안양</strong>12월 8일</p>
-                        </div>
-                        <div>
-                            <h3>리뉴얼 오픈</h3>
-                            <p><em>경기도</em><strong>인덕원 사거리</strong>12월 8일</p>
-                        </div>
-                        <div>
-                            <h3>리뉴얼 오픈</h3>
-                            <p><em>경기도</em><strong>용인테크노밸리</strong>12월 8일</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //opening -->
-    
-    
-    <section id="new">
-        <div class="container">
-            <div class="row">
-                <div class="new">
-                    <h2><em>새로운 영화</em></h2>
-                    <div class="new_left">
-                        <div class="play" id="showTrailer" data-youtube="F1239ZePXfM">
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
-                                <circle class="st0" cx="60" cy="60.4" r="56"/>
-                                <path class="st1" d="M81,65.4c4.8-2.8,4.8-7.2,0-10L53.5,39.6c-4.8-2.8-8.7-0.5-8.7,5v31.7c0,5.5,3.9,7.8,8.7,5L81,65.4z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="new_right">
-                        <h3 class="title">로그 원: 스타워즈 스토리</h3>
-                        <span class="release">2016년 10월 28일 개봉</span>
-                        <div class="star">
-                            <span class="icon star1"></span>
-                            <span class="icon star1"></span>
-                            <span class="icon star1"></span>
-                            <span class="icon star2"></span>
-                            <span class="icon star0"></span>
-                            <strong>7.5/10</strong>
-                        </div>
-                        <ul class="summary">
-                            <li class="genre"><span class="bar">액션</span><span>미국, 오스트레일리아</span></li>
-                            <li class="age"><span class="bar">142분</span><span>12세 이상 관람가</span></li>
-                            <li class="desc">단숨에 행성 하나를 파괴할 위력을 지닌 데스 스타가 완성되기 전에 설계도를 훔쳐내야 하는 이번 작전의 성공 확률은 고작 2.4%. 생사도 모르는 아버지에 얽힌 비밀을 밝히려는 진을 ...비롯해 유능한 정보 요원 ‘카시안’(디에고 루나), 두 눈이 멀었지만 탁월한 무술 실력을 지닌 ‘치루트’(견자단), 전투 베테랑 ‘베이즈’, 파일럿 ‘보디’, 시니컬한 드로이드 ‘K-2SO’까지 합류, 거대한 전쟁을 끝낼 ‘로그 원’이 이끄는 가장 비밀스런 작전이 시작되는데…</li>
-                        </ul>
-                        <div class="select">
-                            <div class="s1">
-                                <label for="udate" class="ir_so">날짜</label>
-                                <input type="text" id="udate" name="udate" value="2019년 1월 25일" class="ui_select2">
-                            </div>
-                            <div class="s2">
-                                <label for="utime" class="ir_so">시간</label>
-                                <select id="utime" name="utime" class="ui_select2">
-                                    <option value="오전 0:00">오전 0:00</option>
-                                    <option value="오전 1:00">오전 1:00</option>
-                                    <option value="오전 2:00">오전 2:00</option>
-                                    <option value="오전 3:00">오전 3:00</option>
-                                    <option value="오전 4:00">오전 4:00</option>
-                                    <option value="오전 5:00">오전 5:00</option>
-                                    <option value="오전 6:00">오전 6:00</option>
-                                    <option value="오전 7:00">오전 7:00</option>
-                                    <option value="오전 8:00">오전 8:00</option>
-                                    <option value="오전 9:00">오전 9:00</option>
-                                    <option value="오전 10:00">오전 10:00</option>
-                                    <option value="오전 11:00">오전 11:00</option>
-                                    <option value="오전 12:00">오전 12:00</option>
-                                    <option value="오후 1:00">오후 1:00</option>
-                                    <option value="오후 2:00">오후 2:00</option>
-                                    <option value="오후 3:00">오후 3:00</option>
-                                    <option value="오후 4:00">오후 4:00</option>
-                                    <option value="오후 5:00">오후 5:00</option>
-                                    <option value="오후 6:00">오후 6:00</option>
-                                    <option value="오후 7:00">오후 7:00</option>
-                                    <option value="오후 8:00">오후 8:00</option>
-                                    <option value="오후 9:00">오후 9:00</option>
-                                    <option value="오후 10:00">오후 10:00</option>
-                                    <option value="오후 11:00">오후 11:00</option>
-                                    <option value="오후 12:00">오후 12:00</option>
-                                </select>
-                            </div>
-                            <div class="s3">
-                                <label for="utext" class="ir_so">주소 또는 도로명을 입력해주세요.</label>
-                                <input type="text" id="utext" name="utext" class="ui_input3" placeholder="주소 또는 도로명을 입력해주세요.">
-                            </div>
-                        </div>
-                        <div class="btn">
-                            <a href="#" class="white">좌석확인</a>
-                            <a href="#" class="purple">예매하기</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //new -->
-    
-    
-    <section id="help">
-        <div class="container">
-            <div class="row">
-                <div class="help clearfix">
-                    <article class="help_box1">
-                        <h3><em>공지사항</em></h3>
-                        <div class="notice">
-                            <ul>
-                                <li class="active"><a href="#">전체 공지</a>
-                                    <ul>
-                                        <li>
-                                            <dl>
-                                                <dt><strong class="bar">전체</strong> <em>2019.01.25</em></dt>
-                                                <dd>[무대인사] (뺑반) 1주차~ (뺑반) 1주차~ (뺑반) 1주차~ (뺑반) 1주차~ (뺑반) 1주차~</dd>
-                                            </dl>            
-                                        </li>
-                                        <li>
-                                            <dl>
-                                                <dt><strong class="bar">강남</strong> <em>2019.01.25</em></dt>
-                                                <dd>[라이브뷰잉] 플라잉독 10주년 기념 라이브 10주년 기념 라이브 10주년 기념 라이브..</dd>
-                                            </dl>
-                                        </li>
-                                        <li>
-                                            <dl>
-                                                <dt><strong class="bar">안양</strong> <em>2019.01.25</em></dt>
-                                                <dd>[무대인사] (내 안의 그놈) 1주차 1주차 1주차 1주차 1주차 1주차 1주차 1주차 </dd>
-                                            </dl>
-                                        </li>
-                                        <li>
-                                            <dl>
-                                                <dt><strong class="bar">전체</strong> <em>2019.01.25</em></dt>
-                                                <dd>[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</dd>
-                                            </dl>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">영화관 공지</a>
-                                    <ul>
-                                        <li>
-                                            <dl>
-                                                <dt><strong class="bar">전체</strong> <em>2019.01.25</em></dt>
-                                                <dd>[무대인사] (내 안의 그놈) 1주차 1주차 1주차 1주차 1주차 1주차 1주차 1주차</dd>
-                                            </dl>            
-                                        </li>
-                                        <li>
-                                            <dl>
-                                                <dt><strong class="bar">강남</strong> <em>2019.01.25</em></dt>
-                                                <dd>[무대인사] (내 안의 그놈) 1주차 1주차 1주차 1주차 1주차 1주차 1주차 1주차</dd>
-                                            </dl>
-                                        </li>
-                                        <li>
-                                            <dl>
-                                                <dt><strong class="bar">안양</strong> <em>2019.01.25</em></dt>
-                                                <dd>[무대인사] (내 안의 그놈) 1주차 1주차 1주차 1주차 1주차 1주차 1주차 1주차 </dd>
-                                            </dl>
-                                        </li>
-                                        <li>
-                                            <dl>
-                                                <dt><strong class="bar">전체</strong> <em>2019.01.25</em></dt>
-                                                <dd>[공지] 2019년 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트 1월 VIP 미션 이벤트</dd>
-                                            </dl>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="help_box2">
-                        <h3><em>메가박스 할인카드</em></h3>
-                        <div class="card">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <span><img src="assets/img/card01.jpg" srcset="assets/img/card01@2.jpg 2x" alt="card01"></span>
-                                        <strong>T멤버십 일반</strong>
-                                        <em>영화 2,000원 현장 즉시 할인(1일 5매)</em>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span><img src="assets/img/card02.jpg" srcset="assets/img/card02@2.jpg 2x" alt="card02"></span>
-                                        <strong>LG U+</strong>
-                                        <em>영화 2,000원 현장 즉시 할인(1일 5매)</em>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span><img src="assets/img/card03.jpg" srcset="assets/img/card03@2.jpg 2x" alt="card03 "></span>
-                                        <strong>SK멤버십 일반</strong>
-                                        <em>영화 2,000원 현장 즉시 할인(1일 5매)</em>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="help_box3">
-                        <h3>고객센터</h3>
-                        <div class="service">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <span class="img_svg">
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                    viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
-                                                <g>
-                                                    <polygon style="fill:none;" points="86.9,57.4 98.1,48.3 97.9,48.2 86.9,48.2"/>
-                                                    <polygon style="fill:none;" points="22.5,48.2 21.9,48.6 32.9,57.6 32.9,48.2"/>
-                                                    <polygon style="fill:#FFFFFF;" points="97.9,48.2 86.9,42 86.9,48.2"/>
-                                                    <polygon style="fill:#FFFFFF;" points="32.9,42.4 22.5,48.2 32.9,48.2"/>
-                                                    <path style="fill:#FFFFFF;" d="M83.9,23c0-0.7-0.6-1.3-1.3-1.3H37.2c-0.7,0-1.3,0.6-1.3,1.3v37L49.2,71c3.2-0.9,6.7-1.4,10.3-1.4
-                                                        c3.5,0,7,0.5,10.5,1.5l13.9-11.2V23z M52,40.5c0-0.8,0.7-1.5,1.5-1.5h24c0.8,0,1.5,0.7,1.5,1.5S78.3,42,77.5,42h-24
-                                                        C52.7,42,52,41.3,52,40.5z M41.5,31c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h19c0.8,0,1.5,0.7,1.5,1.5S61.3,31,60.5,31H41.5z
-                                                            M73.5,52h-32c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h32c0.8,0,1.5,0.7,1.5,1.5S74.3,52,73.5,52z"/>
-                                                    <path d="M32.9,42.4v5.8v9.4l3,2.5V23c0-0.7,0.6-1.3,1.3-1.3h45.3c0.7,0,1.3,0.6,1.3,1.3v36.8l3-2.4v-9.2V42v-3.4V23
-                                                        c0-2.4-1.9-4.3-4.3-4.3H37.2c-2.4,0-4.3,1.9-4.3,4.3v15.9V42.4z"/>
-                                                    <path style="fill:#FFFFFF;" d="M73.4,72.1c6,2.3,11.8,6,17.2,11.1c3.8,3.6,6.7,7.1,8.5,9.7V51.4L73.4,72.1z"/>
-                                                    <path style="fill:#FFFFFF;" d="M20.6,51.4v41.3c4-5.7,12.6-16,25.2-20.7L20.6,51.4z"/>
-                                                    <path style="fill:#755CA7;" d="M101.6,47.1l0.1-0.2l-14.9-8.4V42l11.1,6.2l0.2,0.1l-11.3,9.1l-3,2.4L70,71c-3.4-1-6.9-1.5-10.5-1.5
-                                                        c-3.7,0-7.1,0.5-10.3,1.4L35.9,60l-3-2.5l-11-9l0.6-0.3l10.4-5.8v-3.4L19,46.7c-0.2,0-0.4,0-0.6,0.1c-0.5,0.2-0.9,0.8-0.9,1.4v49.3
-                                                        c0,0.8,0.7,1.5,1.5,1.5h0.2h81.1h0.2c0.8,0,1.5-0.7,1.5-1.5V48.2C102.1,47.8,102,47.4,101.6,47.1z M99.1,92.9
-                                                        c-1.9-2.6-4.7-6.1-8.5-9.7c-5.4-5.1-11.2-8.8-17.2-11.1l25.8-20.8V92.9z M97.7,96H22c4.2-6.2,17.5-23.5,37.5-23.5
-                                                        C79.6,72.5,93.3,89.7,97.7,96z M20.6,92.7V51.4L45.8,72C33.2,76.8,24.6,87,20.6,92.7z"/>
-                                                    <path style="fill:#FFFFFF;" d="M59.5,72.5c-20,0-33.4,17.2-37.5,23.5h75.7C93.3,89.7,79.6,72.5,59.5,72.5z"/>
-                                                    <path d="M62,29.5c0-0.8-0.7-1.5-1.5-1.5h-19c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h19C61.3,31,62,30.3,62,29.5z"/>
-                                                    <path d="M77.5,42c0.8,0,1.5-0.7,1.5-1.5S78.3,39,77.5,39h-24c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5H77.5z"/>
-                                                    <path d="M73.5,49h-32c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h32c0.8,0,1.5-0.7,1.5-1.5S74.3,49,73.5,49z"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <strong>1:1 문의</strong>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="img_svg">
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
-                                                <g>
-                                                    <polygon style="fill:none;" points="199.9,54.4 211.1,45.3 210.9,45.2 199.9,45.2 	"/>
-                                                    <polygon style="fill:none;" points="135.5,45.2 134.9,45.6 145.9,54.6 145.9,45.2 	"/>
-                                                    <polygon style="fill:#FFFFFF;" points="210.9,45.2 199.9,39 199.9,45.2 	"/>
-                                                    <polygon style="fill:#FFFFFF;" points="145.9,39.4 135.5,45.2 145.9,45.2 	"/>
-                                                    <path style="fill:#FFFFFF;" d="M196.9,20c0-0.7-0.6-1.3-1.3-1.3h-45.3c-0.7,0-1.3,0.6-1.3,1.3v37L162.2,68c3.2-0.9,6.7-1.4,10.3-1.4
-                                                        c3.5,0,7,0.5,10.5,1.5l13.9-11.2V20z M165,37.5c0-0.8,0.7-1.5,1.5-1.5h24c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5h-24
-                                                        C165.7,39,165,38.3,165,37.5z M154.5,28c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h19c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5H154.5z
-                                                            M186.5,49h-32c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h32c0.8,0,1.5,0.7,1.5,1.5S187.3,49,186.5,49z"/>
-                                                    <path d="M145.9,39.4v5.8v9.4l3,2.5V20c0-0.7,0.6-1.3,1.3-1.3h45.3c0.7,0,1.3,0.6,1.3,1.3v36.8l3-2.4v-9.2V39v-3.4V20
-                                                        c0-2.4-1.9-4.3-4.3-4.3h-45.3c-2.4,0-4.3,1.9-4.3,4.3v15.9V39.4z"/>
-                                                    <path style="fill:#FFFFFF;" d="M186.4,69.1c6,2.3,11.8,6,17.2,11.1c3.8,3.6,6.7,7.1,8.5,9.7V48.4L186.4,69.1z"/>
-                                                    <path style="fill:#FFFFFF;" d="M133.6,48.4v41.3c4-5.7,12.6-16,25.2-20.7L133.6,48.4z"/>
-                                                    <path style="fill:#755CA7;" d="M214.6,44.1l0.1-0.2l-14.9-8.4V39l11.1,6.2l0.2,0.1l-11.3,9.1l-3,2.4L183,68c-3.4-1-6.9-1.5-10.5-1.5
-                                                        c-3.7,0-7.1,0.5-10.3,1.4L148.9,57l-3-2.5l-11-9l0.6-0.3l10.4-5.8v-3.4L132,43.7c-0.2,0-0.4,0-0.6,0.1c-0.5,0.2-0.9,0.8-0.9,1.4
-                                                        v49.3c0,0.8,0.7,1.5,1.5,1.5h0.2h81.1h0.2c0.8,0,1.5-0.7,1.5-1.5V45.2C215.1,44.8,215,44.4,214.6,44.1z M212.1,89.9
-                                                        c-1.9-2.6-4.7-6.1-8.5-9.7c-5.4-5.1-11.2-8.8-17.2-11.1l25.8-20.8V89.9z M210.7,93H135c4.2-6.2,17.5-23.5,37.5-23.5
-                                                        C192.6,69.5,206.3,86.7,210.7,93z M133.6,89.7V48.4L158.8,69C146.2,73.8,137.6,84,133.6,89.7z"/>
-                                                    <path style="fill:#FFFFFF;" d="M172.5,69.5c-20,0-33.4,17.2-37.5,23.5h75.7C206.3,86.7,192.6,69.5,172.5,69.5z"/>
-                                                    <path d="M175,26.5c0-0.8-0.7-1.5-1.5-1.5h-19c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h19C174.3,28,175,27.3,175,26.5z"/>
-                                                    <path d="M190.5,39c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5h-24c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5H190.5z"/>
-                                                    <path d="M186.5,46h-32c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h32c0.8,0,1.5-0.7,1.5-1.5S187.3,46,186.5,46z"/>
-                                                    <path style="fill:#FFFFFF;" d="M85.3,65.3c0.8,0.1,1.6-0.2,2.3-0.7c0.6-0.5,1-1.3,1.1-2.1c0.1-0.8-0.2-1.6-0.7-2.3c-0.5-0.6-1.3-1-2.1-1.1
-                                                        c-0.1,0-0.2,0-0.3,0c-0.7,0-1.4,0.2-1.9,0.7c-0.6,0.5-1,1.3-1.1,2.1c-0.1,0.8,0.2,1.6,0.7,2.3C83.7,64.8,84.5,65.2,85.3,65.3z"/>
-                                                    <path style="fill:#FFFFFF;" d="M70.5,58.2c0.8,0.1,1.6-0.2,2.3-0.7c1.3-1.1,1.5-3,0.5-4.4c-0.6-0.8-1.5-1.2-2.4-1.2c-0.7,0-1.4,0.2-2,0.7
-                                                        c-1.3,1.1-1.5,3-0.5,4.4C68.9,57.7,69.6,58.1,70.5,58.2z"/>
-                                                    <path style="fill:#FFFFFF;" d="M44.4,69.9c4.7-0.6,9,2.7,9.6,7.4c0,0.3,0.1,0.6,0.1,1h11.4c0.1-4.2,3.2-7.8,7.4-8.3c4.7-0.6,9,2.7,9.6,7.4
-                                                        c0.3,2.4-0.5,4.8-1.9,6.5l11.9,12.7c2.7,1.9,6.6,2.1,9.6,0.5c2.5-1.3,4-3.5,4-6.1c0-1-0.7-3.8-1.1-5.1c-0.2-0.9-0.4-1.3-0.4-1.6
-                                                        l-8.1-29.9c-1.5-6.2-6.3-10.4-11.9-10.4h-49c-5.6,0-10.1,5.4-11.9,10.4l-9.2,32.1c-0.3,1.1-0.5,2.2-0.4,3.3c0,0.5,0,0.9,0,1.1
-                                                        c0.3,2.7,1.9,4.9,4.3,6.1c2.6,1.3,5.6,1.2,8.1-0.2c0.4-0.2,0.8-0.5,1.2-0.8l11.8-11.7c-1.2-1.3-2.1-2.9-2.3-4.8
-                                                        C36.5,74.7,39.8,70.5,44.4,69.9z M79,61.5c0.2-1.8,1-3.3,2.4-4.4c1.4-1.1,3.1-1.6,4.8-1.4c1.8,0.2,3.3,1,4.4,2.4s1.6,3.1,1.4,4.8
-                                                        c-0.2,1.8-1,3.3-2.4,4.4c-1.2,1-2.6,1.5-4.1,1.5c-0.2,0-0.5,0-0.7,0c-1.8-0.2-3.3-1-4.4-2.4S78.9,63.2,79,61.5z M66.6,50
-                                                        c2.8-2.3,7-1.9,9.3,1c2.3,2.8,1.9,7-1,9.3c-1.2,1-2.6,1.5-4.1,1.5c-0.2,0-0.5,0-0.7,0c-1.8-0.2-3.3-1-4.4-2.4
-                                                        C63.4,56.4,63.8,52.3,66.6,50z M31.4,59.9c0-1,0.8-1.8,1.8-1.8h5.4v-5.4c0-1,0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8v5.4h5.4
-                                                        c1,0,1.8,0.8,1.8,1.8s-0.8,1.8-1.8,1.8H42V67c0,1-0.8,1.8-1.8,1.8S38.5,68,38.5,67v-5.4h-5.4C32.2,61.7,31.4,60.9,31.4,59.9z"/>
-                                                    <path style="fill:#000000;" d="M108.3,84.9c-0.1-0.5-0.3-1-0.3-1.2l-8.2-30.4c-1.9-7.8-8-13-15.3-13H61.8c0-0.1,0-0.1,0-0.2V20.2
-                                                        c0-1-0.8-1.8-1.8-1.8s-1.8,0.8-1.8,1.8v19.9c0,0.1,0,0.1,0,0.2H35.5c-7.4,0-13,6.4-15.2,12.8L11,85.4c-0.4,1.4-0.6,2.9-0.6,4.4
-                                                        c0,1,0,1.3,0.1,1.4c0.5,3.9,2.7,7.1,6.2,8.8c3.6,1.8,7.9,1.7,11.4-0.3c0.6-0.3,1.2-0.7,1.7-1.2l12.5-12.3c-1.1-0.5-2.1-1.1-3-2
-                                                        L27.5,95.9c-0.4,0.3-0.8,0.6-1.2,0.8c-2.5,1.4-5.5,1.5-8.1,0.2c-2.4-1.2-4-3.4-4.3-6.1c0-0.2,0-0.6,0-1.1c0-1.1,0.1-2.3,0.4-3.3
-                                                        l9.2-32.1c1.8-5,6.3-10.4,11.9-10.4h49c5.6,0,10.4,4.1,11.9,10.4l8.1,29.9c0,0.3,0.2,0.7,0.4,1.6c0.4,1.3,1.1,4.1,1.1,5.1
-                                                        c0,2.6-1.5,4.8-4,6.1c-3.1,1.6-6.9,1.3-9.6-0.5L80.6,83.8c-0.7,0.9-1.7,1.6-2.8,2.2L90,99l0.3,0.2c2.2,1.6,4.8,2.3,7.4,2.3
-                                                        c2,0,4.1-0.5,6-1.4c3.7-1.9,5.9-5.3,5.9-9.3C109.5,89.5,109,87.3,108.3,84.9z"/>
-                                                    <path style="fill:#000000;" d="M65.5,79.4c-0.1-0.4-0.1-0.8-0.1-1.2H54.1c0,1.2-0.2,2.4-0.7,3.5h12.8C65.9,81,65.6,80.2,65.5,79.4z"/>
-                                                    <path style="fill:#FFFFFF;" d="M50.5,77.7c-0.3-2.5-2.5-4.4-5-4.4c-0.2,0-0.4,0-0.6,0c-2.8,0.4-4.7,2.9-4.4,5.7c0.4,2.8,2.9,4.7,5.7,4.4
-                                                        C48.9,83,50.9,80.4,50.5,77.7z"/>
-                                                    <path style="fill:#755CA7;" d="M54.1,78.2c0-0.3,0-0.6-0.1-1c-0.6-4.7-4.9-8-9.6-7.4c-4.7,0.6-8,4.9-7.4,9.6c0.2,1.9,1.1,3.5,2.3,4.8
-                                                        c0.8,0.9,1.8,1.5,3,2c1,0.4,2.1,0.6,3.2,0.6c0.4,0,0.7,0,1.1-0.1c3.1-0.4,5.6-2.4,6.8-5.1C53.8,80.6,54.1,79.4,54.1,78.2z M40.5,79
-                                                        c-0.4-2.8,1.6-5.3,4.4-5.7c0.2,0,0.4,0,0.6,0c2.5,0,4.7,1.9,5,4.4c0.4,2.8-1.6,5.3-4.4,5.7C43.4,83.7,40.9,81.7,40.5,79z"/>
-                                                    <path style="fill:#FFFFFF;" d="M74.7,83.3c2.8-0.4,4.7-2.9,4.4-5.7c-0.3-2.5-2.5-4.4-5-4.4c-0.2,0-0.4,0-0.6,0c-2.8,0.4-4.7,2.9-4.4,5.7
-                                                        C69.4,81.7,71.9,83.7,74.7,83.3z"/>
-                                                    <path style="fill:#755CA7;" d="M80.6,83.8c1.5-1.8,2.2-4.1,1.9-6.5c-0.6-4.7-4.9-8-9.6-7.4c-4.3,0.5-7.4,4.2-7.4,8.3c0,0.4,0,0.8,0.1,1.2
-                                                        c0.1,0.8,0.3,1.6,0.6,2.3c1.3,3.1,4.4,5.2,7.9,5.2c0.4,0,0.7,0,1.1-0.1c1-0.1,1.9-0.4,2.7-0.8C78.9,85.4,79.8,84.7,80.6,83.8z
-                                                            M69,79c-0.4-2.8,1.6-5.3,4.4-5.7c0.2,0,0.4,0,0.6,0c2.5,0,4.7,1.9,5,4.4c0.4,2.8-1.6,5.3-4.4,5.7C71.9,83.7,69.4,81.7,69,79z"/>
-                                                    <path style="fill:#755CA7;" d="M38.5,67c0,1,0.8,1.8,1.8,1.8S42,68,42,67v-5.4h5.4c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H42v-5.4
-                                                        c0-1-0.8-1.8-1.8-1.8s-1.8,0.8-1.8,1.8v5.4h-5.4c-1,0-1.8,0.8-1.8,1.8s0.8,1.8,1.8,1.8h5.4V67z"/>
-                                                    <path style="fill:#755CA7;" d="M70.1,61.7c0.2,0,0.5,0,0.7,0c1.5,0,3-0.5,4.1-1.5c2.8-2.3,3.3-6.5,1-9.3c-2.3-2.8-6.5-3.3-9.3-1
-                                                        c-2.8,2.3-3.3,6.5-1,9.3C66.8,60.6,68.3,61.5,70.1,61.7z M68.8,52.7c0.6-0.5,1.3-0.7,2-0.7c0.9,0,1.8,0.4,2.4,1.2
-                                                        c1.1,1.3,0.9,3.3-0.5,4.4c-0.6,0.5-1.4,0.8-2.3,0.7c-0.8-0.1-1.6-0.5-2.1-1.1C67.3,55.7,67.5,53.8,68.8,52.7z"/>
-                                                    <path style="fill:#755CA7;" d="M84.9,68.8c0.2,0,0.5,0,0.7,0c1.5,0,3-0.5,4.1-1.5c1.4-1.1,2.2-2.7,2.4-4.4c0.2-1.8-0.3-3.5-1.4-4.8
-                                                        s-2.7-2.2-4.4-2.4c-1.7-0.2-3.5,0.3-4.8,1.4c-1.4,1.1-2.2,2.7-2.4,4.4c-0.2,1.8,0.3,3.5,1.4,4.8S83.2,68.6,84.9,68.8z M82.5,61.9
-                                                        c0.1-0.8,0.5-1.6,1.1-2.1c0.6-0.5,1.2-0.7,1.9-0.7c0.1,0,0.2,0,0.3,0c0.8,0.1,1.6,0.5,2.1,1.1c0.5,0.6,0.8,1.5,0.7,2.3
-                                                        c-0.1,0.8-0.5,1.6-1.1,2.1c-0.6,0.5-1.5,0.8-2.3,0.7c-0.8-0.1-1.6-0.5-2.1-1.1C82.7,63.5,82.4,62.7,82.5,61.9z"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <strong>단체관람</strong>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="img_svg">
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
-                                                <g>
-                                                    <polygon style="fill:none;" points="199.9,54.4 211.1,45.3 210.9,45.2 199.9,45.2 	"/>
-                                                    <polygon style="fill:none;" points="135.5,45.2 134.9,45.6 145.9,54.6 145.9,45.2 	"/>
-                                                    <polygon style="fill:#FFFFFF;" points="210.9,45.2 199.9,39 199.9,45.2 	"/>
-                                                    <polygon style="fill:#FFFFFF;" points="145.9,39.4 135.5,45.2 145.9,45.2 	"/>
-                                                    <path style="fill:#FFFFFF;" d="M196.9,20c0-0.7-0.6-1.3-1.3-1.3h-45.3c-0.7,0-1.3,0.6-1.3,1.3v37L162.2,68c3.2-0.9,6.7-1.4,10.3-1.4
-                                                        c3.5,0,7,0.5,10.5,1.5l13.9-11.2V20z M165,37.5c0-0.8,0.7-1.5,1.5-1.5h24c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5h-24
-                                                        C165.7,39,165,38.3,165,37.5z M154.5,28c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h19c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5H154.5z
-                                                            M186.5,49h-32c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h32c0.8,0,1.5,0.7,1.5,1.5S187.3,49,186.5,49z"/>
-                                                    <path d="M145.9,39.4v5.8v9.4l3,2.5V20c0-0.7,0.6-1.3,1.3-1.3h45.3c0.7,0,1.3,0.6,1.3,1.3v36.8l3-2.4v-9.2V39v-3.4V20
-                                                        c0-2.4-1.9-4.3-4.3-4.3h-45.3c-2.4,0-4.3,1.9-4.3,4.3v15.9V39.4z"/>
-                                                    <path style="fill:#FFFFFF;" d="M186.4,69.1c6,2.3,11.8,6,17.2,11.1c3.8,3.6,6.7,7.1,8.5,9.7V48.4L186.4,69.1z"/>
-                                                    <path style="fill:#FFFFFF;" d="M133.6,48.4v41.3c4-5.7,12.6-16,25.2-20.7L133.6,48.4z"/>
-                                                    <path style="fill:#755CA7;" d="M214.6,44.1l0.1-0.2l-14.9-8.4V39l11.1,6.2l0.2,0.1l-11.3,9.1l-3,2.4L183,68c-3.4-1-6.9-1.5-10.5-1.5
-                                                        c-3.7,0-7.1,0.5-10.3,1.4L148.9,57l-3-2.5l-11-9l0.6-0.3l10.4-5.8v-3.4L132,43.7c-0.2,0-0.4,0-0.6,0.1c-0.5,0.2-0.9,0.8-0.9,1.4
-                                                        v49.3c0,0.8,0.7,1.5,1.5,1.5h0.2h81.1h0.2c0.8,0,1.5-0.7,1.5-1.5V45.2C215.1,44.8,215,44.4,214.6,44.1z M212.1,89.9
-                                                        c-1.9-2.6-4.7-6.1-8.5-9.7c-5.4-5.1-11.2-8.8-17.2-11.1l25.8-20.8V89.9z M210.7,93H135c4.2-6.2,17.5-23.5,37.5-23.5
-                                                        C192.6,69.5,206.3,86.7,210.7,93z M133.6,89.7V48.4L158.8,69C146.2,73.8,137.6,84,133.6,89.7z"/>
-                                                    <path style="fill:#FFFFFF;" d="M172.5,69.5c-20,0-33.4,17.2-37.5,23.5h75.7C206.3,86.7,192.6,69.5,172.5,69.5z"/>
-                                                    <path d="M175,26.5c0-0.8-0.7-1.5-1.5-1.5h-19c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h19C174.3,28,175,27.3,175,26.5z"/>
-                                                    <path d="M190.5,39c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5h-24c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5H190.5z"/>
-                                                    <path d="M186.5,46h-32c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h32c0.8,0,1.5-0.7,1.5-1.5S187.3,46,186.5,46z"/>
-                                                    <path style="fill:#FFFFFF;" d="M261.3,167.3c0.8,0.1,1.6-0.2,2.3-0.7c0.6-0.5,1-1.3,1.1-2.1c0.1-0.8-0.2-1.6-0.7-2.3c-0.5-0.6-1.3-1-2.1-1.1
-                                                        c-0.1,0-0.2,0-0.3,0c-0.7,0-1.4,0.2-1.9,0.7c-0.6,0.5-1,1.3-1.1,2.1c-0.1,0.8,0.2,1.6,0.7,2.3C259.7,166.8,260.5,167.2,261.3,167.3
-                                                        z"/>
-                                                    <path style="fill:#FFFFFF;" d="M246.5,160.2c0.8,0.1,1.6-0.2,2.3-0.7c1.3-1.1,1.5-3,0.5-4.4c-0.6-0.8-1.5-1.2-2.4-1.2c-0.7,0-1.4,0.2-2,0.7
-                                                        c-1.3,1.1-1.5,3-0.5,4.4C244.9,159.7,245.6,160.1,246.5,160.2z"/>
-                                                    <path style="fill:#FFFFFF;" d="M220.4,171.9c4.7-0.6,9,2.7,9.6,7.4c0,0.3,0.1,0.6,0.1,1h11.4c0.1-4.2,3.2-7.8,7.4-8.3c4.7-0.6,9,2.7,9.6,7.4
-                                                        c0.3,2.4-0.5,4.8-1.9,6.5l11.9,12.7c2.7,1.9,6.6,2.1,9.6,0.5c2.5-1.3,4-3.5,4-6.1c0-1-0.7-3.8-1.1-5.1c-0.2-0.9-0.4-1.3-0.4-1.6
-                                                        l-8.1-29.9c-1.5-6.2-6.3-10.4-11.9-10.4h-49c-5.6,0-10.1,5.4-11.9,10.4l-9.2,32.1c-0.3,1.1-0.5,2.2-0.4,3.3c0,0.5,0,0.9,0,1.1
-                                                        c0.3,2.7,1.9,4.9,4.3,6.1c2.6,1.3,5.6,1.2,8.1-0.2c0.4-0.2,0.8-0.5,1.2-0.8l11.8-11.7c-1.2-1.3-2.1-2.9-2.3-4.8
-                                                        C212.5,176.7,215.8,172.5,220.4,171.9z M255,163.5c0.2-1.8,1-3.3,2.4-4.4c1.4-1.1,3.1-1.6,4.8-1.4c1.8,0.2,3.3,1,4.4,2.4
-                                                        s1.6,3.1,1.4,4.8c-0.2,1.8-1,3.3-2.4,4.4c-1.2,1-2.6,1.5-4.1,1.5c-0.2,0-0.5,0-0.7,0c-1.8-0.2-3.3-1-4.4-2.4S254.9,165.2,255,163.5
-                                                        z M242.6,152c2.8-2.3,7-1.9,9.3,1c2.3,2.8,1.9,7-1,9.3c-1.2,1-2.6,1.5-4.1,1.5c-0.2,0-0.5,0-0.7,0c-1.8-0.2-3.3-1-4.4-2.4
-                                                        C239.4,158.4,239.8,154.3,242.6,152z M207.4,161.9c0-1,0.8-1.8,1.8-1.8h5.4v-5.4c0-1,0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8v5.4h5.4
-                                                        c1,0,1.8,0.8,1.8,1.8s-0.8,1.8-1.8,1.8H218v5.4c0,1-0.8,1.8-1.8,1.8s-1.8-0.8-1.8-1.8v-5.4h-5.4
-                                                        C208.2,163.7,207.4,162.9,207.4,161.9z"/>
-                                                    <path class="st3" d="M284.3,186.9c-0.1-0.5-0.3-1-0.3-1.2l-8.2-30.4c-1.9-7.8-8-13-15.3-13h-22.8c0-0.1,0-0.1,0-0.2v-19.9
-                                                        c0-1-0.8-1.8-1.8-1.8s-1.8,0.8-1.8,1.8v19.9c0,0.1,0,0.1,0,0.2h-22.8c-7.4,0-13,6.4-15.2,12.8l-9.2,32.3c-0.4,1.4-0.6,2.9-0.6,4.4
-                                                        c0,1,0,1.3,0.1,1.4c0.5,3.9,2.7,7.1,6.2,8.8c3.6,1.8,7.9,1.7,11.4-0.3c0.6-0.3,1.2-0.7,1.7-1.2l12.5-12.3c-1.1-0.5-2.1-1.1-3-2
-                                                        l-11.8,11.7c-0.4,0.3-0.8,0.6-1.2,0.8c-2.5,1.4-5.5,1.5-8.1,0.2c-2.4-1.2-4-3.4-4.3-6.1c0-0.2,0-0.6,0-1.1c0-1.1,0.1-2.3,0.4-3.3
-                                                        l9.2-32.1c1.8-5,6.3-10.4,11.9-10.4h49c5.6,0,10.4,4.1,11.9,10.4l8.1,29.9c0,0.3,0.2,0.7,0.4,1.6c0.4,1.3,1.1,4.1,1.1,5.1
-                                                        c0,2.6-1.5,4.8-4,6.1c-3.1,1.6-6.9,1.3-9.6-0.5l-11.9-12.7c-0.7,0.9-1.7,1.6-2.8,2.2l12.2,13l0.3,0.2c2.2,1.6,4.8,2.3,7.4,2.3
-                                                        c2,0,4.1-0.5,6-1.4c3.7-1.9,5.9-5.3,5.9-9.3C285.5,191.5,285,189.3,284.3,186.9z"/>
-                                                    <path style="fill:#000;" d="M241.5,181.4c-0.1-0.4-0.1-0.8-0.1-1.2h-11.4c0,1.2-0.2,2.4-0.7,3.5h12.8C241.9,183,241.6,182.2,241.5,181.4z"
-                                                        />
-                                                    <path style="fill:#FFFFFF;" d="M226.5,179.7c-0.3-2.5-2.5-4.4-5-4.4c-0.2,0-0.4,0-0.6,0c-2.8,0.4-4.7,2.9-4.4,5.7c0.4,2.8,2.9,4.7,5.7,4.4
-                                                        C224.9,185,226.9,182.4,226.5,179.7z"/>
-                                                    <path style="fill:#755CA7;" d="M230.1,180.2c0-0.3,0-0.6-0.1-1c-0.6-4.7-4.9-8-9.6-7.4c-4.7,0.6-8,4.9-7.4,9.6c0.2,1.9,1.1,3.5,2.3,4.8
-                                                        c0.8,0.9,1.8,1.5,3,2c1,0.4,2.1,0.6,3.2,0.6c0.4,0,0.7,0,1.1-0.1c3.1-0.4,5.6-2.4,6.8-5.1C229.8,182.6,230.1,181.4,230.1,180.2z
-                                                            M216.5,181c-0.4-2.8,1.6-5.3,4.4-5.7c0.2,0,0.4,0,0.6,0c2.5,0,4.7,1.9,5,4.4c0.4,2.8-1.6,5.3-4.4,5.7
-                                                        C219.4,185.7,216.9,183.7,216.5,181z"/>
-                                                    <path style="fill:#FFFFFF;" d="M250.7,185.3c2.8-0.4,4.7-2.9,4.4-5.7c-0.3-2.5-2.5-4.4-5-4.4c-0.2,0-0.4,0-0.6,0c-2.8,0.4-4.7,2.9-4.4,5.7
-                                                        C245.4,183.7,247.9,185.7,250.7,185.3z"/>
-                                                    <path style="fill:#755CA7;" d="M256.6,185.8c1.5-1.8,2.2-4.1,1.9-6.5c-0.6-4.7-4.9-8-9.6-7.4c-4.3,0.5-7.4,4.2-7.4,8.3c0,0.4,0,0.8,0.1,1.2
-                                                        c0.1,0.8,0.3,1.6,0.6,2.3c1.3,3.1,4.4,5.2,7.9,5.2c0.4,0,0.7,0,1.1-0.1c1-0.1,1.9-0.4,2.7-0.8C254.9,187.4,255.8,186.7,256.6,185.8
-                                                        z M245,181c-0.4-2.8,1.6-5.3,4.4-5.7c0.2,0,0.4,0,0.6,0c2.5,0,4.7,1.9,5,4.4c0.4,2.8-1.6,5.3-4.4,5.7
-                                                        C247.9,185.7,245.4,183.7,245,181z"/>
-                                                    <path style="fill:#755CA7;" d="M214.5,169c0,1,0.8,1.8,1.8,1.8s1.8-0.8,1.8-1.8v-5.4h5.4c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H218v-5.4
-                                                        c0-1-0.8-1.8-1.8-1.8s-1.8,0.8-1.8,1.8v5.4h-5.4c-1,0-1.8,0.8-1.8,1.8s0.8,1.8,1.8,1.8h5.4V169z"/>
-                                                    <path style="fill:#755CA7;" d="M246.1,163.7c0.2,0,0.5,0,0.7,0c1.5,0,3-0.5,4.1-1.5c2.8-2.3,3.3-6.5,1-9.3c-2.3-2.8-6.5-3.3-9.3-1
-                                                        c-2.8,2.3-3.3,6.5-1,9.3C242.8,162.6,244.3,163.5,246.1,163.7z M244.8,154.7c0.6-0.5,1.3-0.7,2-0.7c0.9,0,1.8,0.4,2.4,1.2
-                                                        c1.1,1.3,0.9,3.3-0.5,4.4c-0.6,0.5-1.4,0.8-2.3,0.7c-0.8-0.1-1.6-0.5-2.1-1.1C243.3,157.7,243.5,155.8,244.8,154.7z"/>
-                                                    <path style="fill:#755CA7;" d="M260.9,170.8c0.2,0,0.5,0,0.7,0c1.5,0,3-0.5,4.1-1.5c1.4-1.1,2.2-2.7,2.4-4.4c0.2-1.8-0.3-3.5-1.4-4.8
-                                                        s-2.7-2.2-4.4-2.4c-1.7-0.2-3.5,0.3-4.8,1.4c-1.4,1.1-2.2,2.7-2.4,4.4c-0.2,1.8,0.3,3.5,1.4,4.8S259.2,170.6,260.9,170.8z
-                                                            M258.5,163.9c0.1-0.8,0.5-1.6,1.1-2.1c0.6-0.5,1.2-0.7,1.9-0.7c0.1,0,0.2,0,0.3,0c0.8,0.1,1.6,0.5,2.1,1.1
-                                                        c0.5,0.6,0.8,1.5,0.7,2.3c-0.1,0.8-0.5,1.6-1.1,2.1c-0.6,0.5-1.5,0.8-2.3,0.7c-0.8-0.1-1.6-0.5-2.1-1.1
-                                                        C258.7,165.5,258.4,164.7,258.5,163.9z"/>
-                                                    <polygon style="fill:none;" points="61.4,35.8 59.4,41.6 63.5,41.6 	"/>
-                                                    <path style="fill:none;" d="M75.9,45c0.5,0,0.9-0.1,1.4-0.3c-0.3-0.2-0.7-0.4-1.1-0.7c-0.4-0.2-0.7-0.4-0.9-0.5C75.1,43.4,75,43.2,75,43
-                                                        c0-0.2,0.1-0.4,0.2-0.5c0.2-0.1,0.3-0.2,0.5-0.2c0.6,0,1.5,0.5,2.9,1.4c0.4-0.4,0.7-1,0.9-1.6c0.2-0.6,0.3-1.3,0.3-2.1
-                                                        c0-1-0.2-1.9-0.5-2.6c-0.3-0.7-0.8-1.3-1.4-1.7s-1.3-0.6-2.1-0.6c-0.6,0-1.1,0.1-1.6,0.3c-0.5,0.2-0.9,0.5-1.2,0.9
-                                                        c-0.3,0.4-0.6,0.9-0.8,1.5s-0.3,1.3-0.3,2.1c0,1.6,0.4,2.8,1.1,3.7C73.8,44.5,74.7,45,75.9,45z"/>
-                                                    <path style="fill:none;" d="M47,90.3c0-3.3-2.1-5.9-4.7-5.9c-1,0-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8H89V29.7c0-1-0.2-1.9-0.5-2.7l-2.3-2.7
-                                                        c-0.6-0.3-1.2-0.5-1.9-0.5H35.6c1.1,1.6,1.8,3.7,1.8,5.9v0.7v1.1v58.9c0,3.3,2.1,5.9,4.7,5.9S47,93.6,47,90.3z M81.7,69.6H60.3
-                                                        c-1,0-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8h21.5c1,0,1.8,0.8,1.8,1.8S82.7,69.6,81.7,69.6z M69.6,37.1c0.3-0.9,0.7-1.6,1.3-2.3
-                                                        c0.6-0.6,1.3-1.1,2.1-1.4c0.8-0.3,1.8-0.5,2.8-0.5c1.4,0,2.7,0.3,3.7,0.9c1,0.6,1.8,1.4,2.3,2.5c0.5,1.1,0.8,2.3,0.8,3.8
-                                                        c0,2.2-0.6,3.9-1.8,5.2c0.4,0.3,0.9,0.5,1.3,0.8s0.8,0.5,1,0.6s0.2,0.4,0.2,0.7c0,0.2-0.1,0.4-0.3,0.6c-0.2,0.2-0.4,0.3-0.7,0.3
-                                                        c-0.2,0-0.5-0.1-0.8-0.2c-0.3-0.1-0.7-0.3-1.1-0.6c-0.4-0.3-0.9-0.6-1.4-0.9c-0.9,0.5-2,0.7-3.4,0.7c-1.1,0-2-0.2-2.9-0.5
-                                                        c-0.9-0.3-1.6-0.8-2.1-1.5c-0.6-0.6-1-1.4-1.3-2.3s-0.4-1.9-0.4-2.9C69.1,38.9,69.3,38,69.6,37.1z M59,35.5
-                                                        c0.1-0.3,0.2-0.6,0.4-0.9c0.1-0.4,0.3-0.7,0.5-0.9c0.2-0.2,0.4-0.4,0.6-0.6c0.3-0.1,0.6-0.2,1-0.2c0.4,0,0.7,0.1,1,0.2
-                                                        c0.3,0.1,0.5,0.3,0.6,0.6c0.2,0.2,0.3,0.5,0.4,0.8c0.1,0.3,0.2,0.6,0.4,1.1l3.6,8.9c0.3,0.7,0.4,1.2,0.4,1.5c0,0.3-0.1,0.6-0.4,0.9
-                                                        c-0.3,0.3-0.6,0.4-1,0.4c-0.2,0-0.4,0-0.6-0.1c-0.2-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.2-0.3-0.3-0.6c-0.1-0.3-0.2-0.5-0.3-0.7
-                                                        l-0.7-1.7h-5.6L58,45.4c-0.3,0.7-0.5,1.2-0.7,1.4s-0.5,0.4-0.9,0.4c-0.4,0-0.7-0.1-0.9-0.4c-0.3-0.3-0.4-0.6-0.4-0.9
-                                                        c0-0.2,0-0.4,0.1-0.6c0.1-0.2,0.2-0.5,0.3-0.8L59,35.5z M45.8,34.8c0-0.4,0.1-0.7,0.2-1s0.3-0.4,0.6-0.6c0.3-0.1,0.6-0.2,1-0.2h6.6
-                                                        c0.4,0,0.8,0.1,1,0.3s0.3,0.5,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8s-0.5,0.3-1,0.3h-5.5v3.5h4.6c0.4,0,0.7,0.1,1,0.3
-                                                        c0.2,0.2,0.3,0.4,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8c-0.2,0.2-0.5,0.3-1,0.3h-4.6v4.6c0,0.6-0.1,1-0.4,1.3c-0.3,0.3-0.6,0.4-1,0.4
-                                                        c-0.4,0-0.8-0.1-1-0.4s-0.4-0.7-0.4-1.3V34.8z M47.4,56.2h17.8c1,0,1.8,0.8,1.8,1.8s-0.8,1.8-1.8,1.8H47.4c-1,0-1.8-0.8-1.8-1.8
-                                                        S46.4,56.2,47.4,56.2z"/>
-                                                    <path style="fill:#FFFFFF;" d="M90.8,84.4H48.6c1.1,1.6,1.8,3.7,1.8,5.9c0,0.3,0,0.6,0,0.9c0,0.1,0,0.2,0,0.3c0,0.2,0,0.4-0.1,0.6
-                                                        c0,0.1,0,0.2-0.1,0.3c0,0.2-0.1,0.4-0.1,0.5c0,0.1-0.1,0.2-0.1,0.3c0,0.2-0.1,0.3-0.2,0.5c0,0.1-0.1,0.2-0.1,0.3
-                                                        c-0.1,0.2-0.1,0.3-0.2,0.5c0,0.1-0.1,0.2-0.1,0.3c-0.1,0.2-0.2,0.4-0.3,0.6c0,0,0,0.1-0.1,0.1c-0.1,0.2-0.3,0.4-0.4,0.6h42.1
-                                                        c2.6,0,4.7-2.6,4.7-5.9S93.4,84.4,90.8,84.4z"/>
-                                                    <path style="fill:#000;" d="M92.5,81.1V29.7c0-5.2-3.7-9.4-8.2-9.4h-55c-4.5,0-8.2,4.2-8.2,9.4v1.8h13v58.9c0,5.2,3.7,9.4,8.2,9.4h48.5
-                                                        c4.5,0,8.2-4.2,8.2-9.4C99,85.8,96.2,82.1,92.5,81.1z M90.8,96.2H48.6c0.1-0.2,0.3-0.4,0.4-0.6c0,0,0-0.1,0.1-0.1
-                                                        c0.1-0.2,0.2-0.4,0.3-0.6c0-0.1,0.1-0.2,0.1-0.3c0.1-0.2,0.1-0.3,0.2-0.5c0-0.1,0.1-0.2,0.1-0.3c0.1-0.2,0.1-0.3,0.2-0.5
-                                                        c0-0.1,0.1-0.2,0.1-0.3c0-0.2,0.1-0.3,0.1-0.5c0-0.1,0-0.2,0.1-0.3c0-0.2,0.1-0.4,0.1-0.6c0-0.1,0-0.2,0-0.3c0-0.3,0-0.6,0-0.9
-                                                        c0-2.2-0.7-4.3-1.8-5.9h42.1c2.6,0,4.7,2.6,4.7,5.9S93.4,96.2,90.8,96.2z M90.8,82.7L90.8,82.7L90.8,82.7z M90.8,29.7L90.8,29.7
-                                                        L90.8,29.7z M29.2,23.8c2.1,0,3.9,1.8,4.5,4.2h-9.1C25.3,25.5,27.1,23.8,29.2,23.8z M37.5,90.3V31.4v-1.1v-0.7
-                                                        c0-2.2-0.7-4.3-1.8-5.9h48.6c0.7,0,1.3,0.2,1.9,0.5c1,0.6,1.8,1.5,2.3,2.7c0.3,0.8,0.5,1.7,0.5,2.7v51.2H42.2c-1,0-1.8,0.8-1.8,1.8
-                                                        s0.8,1.8,1.8,1.8c2.6,0,4.7,2.6,4.7,5.9s-2.1,5.9-4.7,5.9S37.5,93.6,37.5,90.3z"/>
-                                                    <path style="fill:#FFFFFF;" d="M86.2,24.3l2.3,2.7C88,25.8,87.2,24.8,86.2,24.3z"/>
-                                                    <path style="fill:#FFFFFF;" d="M33.8,27.9c-0.6-2.4-2.4-4.2-4.5-4.2s-3.9,1.8-4.5,4.2H33.8z"/>
-                                                    <line style="fill:none;stroke:#FFFFFF;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;" x1="90.8" y1="82.7" x2="90.8" y2="82.7"/>
-                                                    <line style="fill:none;stroke:#FFFFFF;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;" x1="90.8" y1="29.7" x2="90.8" y2="29.7"/>
-                                                    <path style="fill:#755CA7;" d="M47.2,47.2c0.4,0,0.7-0.1,1-0.4c0.3-0.3,0.4-0.7,0.4-1.3v-4.6h4.6c0.4,0,0.7-0.1,1-0.3
-                                                        c0.2-0.2,0.3-0.4,0.3-0.8c0-0.3-0.1-0.6-0.3-0.8c-0.2-0.2-0.5-0.3-1-0.3h-4.6v-3.5h5.5c0.4,0,0.8-0.1,1-0.3s0.3-0.5,0.3-0.8
-                                                        c0-0.3-0.1-0.6-0.3-0.8s-0.5-0.3-1-0.3h-6.6c-0.4,0-0.7,0.1-1,0.2c-0.3,0.1-0.4,0.3-0.6,0.6s-0.2,0.6-0.2,1v10.7
-                                                        c0,0.6,0.1,1,0.4,1.3S46.8,47.2,47.2,47.2z"/>
-                                                    <path style="fill:#755CA7;" d="M55.1,45.9c0,0.3,0.1,0.6,0.4,0.9c0.3,0.3,0.6,0.4,0.9,0.4c0.4,0,0.7-0.1,0.9-0.4s0.4-0.7,0.7-1.4l0.7-1.8h5.6
-                                                        l0.7,1.7c0.1,0.2,0.2,0.5,0.3,0.7c0.1,0.3,0.2,0.5,0.3,0.6c0.1,0.1,0.2,0.2,0.4,0.3c0.2,0.1,0.3,0.1,0.6,0.1c0.4,0,0.7-0.1,1-0.4
-                                                        c0.3-0.3,0.4-0.6,0.4-0.9c0-0.3-0.1-0.8-0.4-1.5l-3.6-8.9c-0.2-0.4-0.3-0.8-0.4-1.1c-0.1-0.3-0.2-0.5-0.4-0.8
-                                                        c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.1-0.6-0.2-1-0.2c-0.4,0-0.7,0.1-1,0.2c-0.3,0.1-0.5,0.3-0.6,0.6c-0.2,0.2-0.3,0.5-0.5,0.9
-                                                        c-0.1,0.4-0.3,0.7-0.4,0.9l-3.5,9c-0.1,0.4-0.2,0.6-0.3,0.8C55.1,45.6,55.1,45.7,55.1,45.9z M61.4,35.8l2.1,5.7h-4.1L61.4,35.8z"/>
-                                                    <path style="fill:#755CA7;" d="M70.8,45.2c0.6,0.6,1.3,1.1,2.1,1.5c0.9,0.3,1.8,0.5,2.9,0.5c1.3,0,2.4-0.2,3.4-0.7c0.5,0.4,0.9,0.7,1.4,0.9
-                                                        c0.4,0.3,0.8,0.5,1.1,0.6c0.3,0.1,0.6,0.2,0.8,0.2c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.6c0-0.3-0.1-0.5-0.2-0.7
-                                                        s-0.5-0.4-1-0.6s-0.9-0.5-1.3-0.8c1.2-1.3,1.8-3,1.8-5.2c0-1.4-0.3-2.7-0.8-3.8c-0.5-1.1-1.3-1.9-2.3-2.5c-1-0.6-2.3-0.9-3.7-0.9
-                                                        c-1.1,0-2,0.2-2.8,0.5c-0.8,0.3-1.5,0.8-2.1,1.4c-0.6,0.6-1,1.4-1.3,2.3c-0.3,0.9-0.5,1.9-0.5,2.9c0,1,0.1,2,0.4,2.9
-                                                        S70.3,44.6,70.8,45.2z M72.2,37.9c0.2-0.6,0.5-1.1,0.8-1.5c0.3-0.4,0.8-0.7,1.2-0.9c0.5-0.2,1-0.3,1.6-0.3c0.8,0,1.5,0.2,2.1,0.6
-                                                        s1.1,0.9,1.4,1.7c0.3,0.7,0.5,1.6,0.5,2.6c0,0.8-0.1,1.5-0.3,2.1c-0.2,0.6-0.5,1.1-0.9,1.6c-1.3-1-2.3-1.4-2.9-1.4
-                                                        c-0.2,0-0.4,0.1-0.5,0.2C75.1,42.6,75,42.8,75,43c0,0.2,0.1,0.4,0.2,0.5c0.2,0.1,0.5,0.3,0.9,0.5c0.4,0.2,0.8,0.4,1.1,0.7
-                                                        c-0.5,0.2-1,0.3-1.4,0.3c-1.1,0-2.1-0.4-2.8-1.3c-0.7-0.9-1.1-2.1-1.1-3.7C71.9,39.2,72,38.5,72.2,37.9z"/>
-                                                    <path style="fill:#755CA7;" d="M47.4,59.7h17.8c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H47.4c-1,0-1.8,0.8-1.8,1.8S46.4,59.7,47.4,59.7z"/>
-                                                    <path style="fill:#755CA7;" d="M81.7,66.1H60.3c-1,0-1.8,0.8-1.8,1.8s0.8,1.8,1.8,1.8h21.5c1,0,1.8-0.8,1.8-1.8S82.7,66.1,81.7,66.1z"/>
-                                                </g>
-                                           </svg>
-                                        </span>
-                                        <strong>자주묻는 질문</strong>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="img_svg">
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
-                                                <style type="text/css">
-                                                    .st0{fill:none;}
-                                                    .st1{fill:#FFFFFF;}
-                                                    .st2{fill:#755CA7;}
-                                                    .st3{fill:#1D1D1B;}
-                                                    .st4{fill:#715EA5;}
-                                                    .st5{fill:none;stroke:#FFFFFF;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;}
-                                                    .st6{fill:none;stroke:#1D1D1B;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;}
-                                                </style>
-                                                <g>
-                                                    <polygon class="st0" points="199.9,54.4 211.1,45.3 210.9,45.2 199.9,45.2 	"/>
-                                                    <polygon class="st0" points="135.5,45.2 134.9,45.6 145.9,54.6 145.9,45.2 	"/>
-                                                    <polygon class="st1" points="210.9,45.2 199.9,39 199.9,45.2 	"/>
-                                                    <polygon class="st1" points="145.9,39.4 135.5,45.2 145.9,45.2 	"/>
-                                                    <path class="st1" d="M196.9,20c0-0.7-0.6-1.3-1.3-1.3h-45.3c-0.7,0-1.3,0.6-1.3,1.3v37L162.2,68c3.2-0.9,6.7-1.4,10.3-1.4
-                                                        c3.5,0,7,0.5,10.5,1.5l13.9-11.2V20z M165,37.5c0-0.8,0.7-1.5,1.5-1.5h24c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5h-24
-                                                        C165.7,39,165,38.3,165,37.5z M154.5,28c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h19c0.8,0,1.5,0.7,1.5,1.5s-0.7,1.5-1.5,1.5H154.5z
-                                                            M186.5,49h-32c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h32c0.8,0,1.5,0.7,1.5,1.5S187.3,49,186.5,49z"/>
-                                                    <path d="M145.9,39.4v5.8v9.4l3,2.5V20c0-0.7,0.6-1.3,1.3-1.3h45.3c0.7,0,1.3,0.6,1.3,1.3v36.8l3-2.4v-9.2V39v-3.4V20
-                                                        c0-2.4-1.9-4.3-4.3-4.3h-45.3c-2.4,0-4.3,1.9-4.3,4.3v15.9V39.4z"/>
-                                                    <path class="st1" d="M186.4,69.1c6,2.3,11.8,6,17.2,11.1c3.8,3.6,6.7,7.1,8.5,9.7V48.4L186.4,69.1z"/>
-                                                    <path class="st1" d="M133.6,48.4v41.3c4-5.7,12.6-16,25.2-20.7L133.6,48.4z"/>
-                                                    <path class="st2" d="M214.6,44.1l0.1-0.2l-14.9-8.4V39l11.1,6.2l0.2,0.1l-11.3,9.1l-3,2.4L183,68c-3.4-1-6.9-1.5-10.5-1.5
-                                                        c-3.7,0-7.1,0.5-10.3,1.4L148.9,57l-3-2.5l-11-9l0.6-0.3l10.4-5.8v-3.4L132,43.7c-0.2,0-0.4,0-0.6,0.1c-0.5,0.2-0.9,0.8-0.9,1.4
-                                                        v49.3c0,0.8,0.7,1.5,1.5,1.5h0.2h81.1h0.2c0.8,0,1.5-0.7,1.5-1.5V45.2C215.1,44.8,215,44.4,214.6,44.1z M212.1,89.9
-                                                        c-1.9-2.6-4.7-6.1-8.5-9.7c-5.4-5.1-11.2-8.8-17.2-11.1l25.8-20.8V89.9z M210.7,93H135c4.2-6.2,17.5-23.5,37.5-23.5
-                                                        C192.6,69.5,206.3,86.7,210.7,93z M133.6,89.7V48.4L158.8,69C146.2,73.8,137.6,84,133.6,89.7z"/>
-                                                    <path class="st1" d="M172.5,69.5c-20,0-33.4,17.2-37.5,23.5h75.7C206.3,86.7,192.6,69.5,172.5,69.5z"/>
-                                                    <path d="M175,26.5c0-0.8-0.7-1.5-1.5-1.5h-19c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h19C174.3,28,175,27.3,175,26.5z"/>
-                                                    <path d="M190.5,39c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5h-24c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5H190.5z"/>
-                                                    <path d="M186.5,46h-32c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h32c0.8,0,1.5-0.7,1.5-1.5S187.3,46,186.5,46z"/>
-                                                    <path class="st1" d="M261.3,167.3c0.8,0.1,1.6-0.2,2.3-0.7c0.6-0.5,1-1.3,1.1-2.1c0.1-0.8-0.2-1.6-0.7-2.3c-0.5-0.6-1.3-1-2.1-1.1
-                                                        c-0.1,0-0.2,0-0.3,0c-0.7,0-1.4,0.2-1.9,0.7c-0.6,0.5-1,1.3-1.1,2.1c-0.1,0.8,0.2,1.6,0.7,2.3C259.7,166.8,260.5,167.2,261.3,167.3
-                                                        z"/>
-                                                    <path class="st1" d="M246.5,160.2c0.8,0.1,1.6-0.2,2.3-0.7c1.3-1.1,1.5-3,0.5-4.4c-0.6-0.8-1.5-1.2-2.4-1.2c-0.7,0-1.4,0.2-2,0.7
-                                                        c-1.3,1.1-1.5,3-0.5,4.4C244.9,159.7,245.6,160.1,246.5,160.2z"/>
-                                                    <path class="st1" d="M220.4,171.9c4.7-0.6,9,2.7,9.6,7.4c0,0.3,0.1,0.6,0.1,1h11.4c0.1-4.2,3.2-7.8,7.4-8.3c4.7-0.6,9,2.7,9.6,7.4
-                                                        c0.3,2.4-0.5,4.8-1.9,6.5l11.9,12.7c2.7,1.9,6.6,2.1,9.6,0.5c2.5-1.3,4-3.5,4-6.1c0-1-0.7-3.8-1.1-5.1c-0.2-0.9-0.4-1.3-0.4-1.6
-                                                        l-8.1-29.9c-1.5-6.2-6.3-10.4-11.9-10.4h-49c-5.6,0-10.1,5.4-11.9,10.4l-9.2,32.1c-0.3,1.1-0.5,2.2-0.4,3.3c0,0.5,0,0.9,0,1.1
-                                                        c0.3,2.7,1.9,4.9,4.3,6.1c2.6,1.3,5.6,1.2,8.1-0.2c0.4-0.2,0.8-0.5,1.2-0.8l11.8-11.7c-1.2-1.3-2.1-2.9-2.3-4.8
-                                                        C212.5,176.7,215.8,172.5,220.4,171.9z M255,163.5c0.2-1.8,1-3.3,2.4-4.4c1.4-1.1,3.1-1.6,4.8-1.4c1.8,0.2,3.3,1,4.4,2.4
-                                                        s1.6,3.1,1.4,4.8c-0.2,1.8-1,3.3-2.4,4.4c-1.2,1-2.6,1.5-4.1,1.5c-0.2,0-0.5,0-0.7,0c-1.8-0.2-3.3-1-4.4-2.4S254.9,165.2,255,163.5
-                                                        z M242.6,152c2.8-2.3,7-1.9,9.3,1c2.3,2.8,1.9,7-1,9.3c-1.2,1-2.6,1.5-4.1,1.5c-0.2,0-0.5,0-0.7,0c-1.8-0.2-3.3-1-4.4-2.4
-                                                        C239.4,158.4,239.8,154.3,242.6,152z M207.4,161.9c0-1,0.8-1.8,1.8-1.8h5.4v-5.4c0-1,0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8v5.4h5.4
-                                                        c1,0,1.8,0.8,1.8,1.8s-0.8,1.8-1.8,1.8H218v5.4c0,1-0.8,1.8-1.8,1.8s-1.8-0.8-1.8-1.8v-5.4h-5.4
-                                                        C208.2,163.7,207.4,162.9,207.4,161.9z"/>
-                                                    <path class="st3" d="M284.3,186.9c-0.1-0.5-0.3-1-0.3-1.2l-8.2-30.4c-1.9-7.8-8-13-15.3-13h-22.8c0-0.1,0-0.1,0-0.2v-19.9
-                                                        c0-1-0.8-1.8-1.8-1.8s-1.8,0.8-1.8,1.8v19.9c0,0.1,0,0.1,0,0.2h-22.8c-7.4,0-13,6.4-15.2,12.8l-9.2,32.3c-0.4,1.4-0.6,2.9-0.6,4.4
-                                                        c0,1,0,1.3,0.1,1.4c0.5,3.9,2.7,7.1,6.2,8.8c3.6,1.8,7.9,1.7,11.4-0.3c0.6-0.3,1.2-0.7,1.7-1.2l12.5-12.3c-1.1-0.5-2.1-1.1-3-2
-                                                        l-11.8,11.7c-0.4,0.3-0.8,0.6-1.2,0.8c-2.5,1.4-5.5,1.5-8.1,0.2c-2.4-1.2-4-3.4-4.3-6.1c0-0.2,0-0.6,0-1.1c0-1.1,0.1-2.3,0.4-3.3
-                                                        l9.2-32.1c1.8-5,6.3-10.4,11.9-10.4h49c5.6,0,10.4,4.1,11.9,10.4l8.1,29.9c0,0.3,0.2,0.7,0.4,1.6c0.4,1.3,1.1,4.1,1.1,5.1
-                                                        c0,2.6-1.5,4.8-4,6.1c-3.1,1.6-6.9,1.3-9.6-0.5l-11.9-12.7c-0.7,0.9-1.7,1.6-2.8,2.2l12.2,13l0.3,0.2c2.2,1.6,4.8,2.3,7.4,2.3
-                                                        c2,0,4.1-0.5,6-1.4c3.7-1.9,5.9-5.3,5.9-9.3C285.5,191.5,285,189.3,284.3,186.9z"/>
-                                                    <path class="st3" d="M241.5,181.4c-0.1-0.4-0.1-0.8-0.1-1.2h-11.4c0,1.2-0.2,2.4-0.7,3.5h12.8C241.9,183,241.6,182.2,241.5,181.4z"
-                                                        />
-                                                    <path class="st1" d="M226.5,179.7c-0.3-2.5-2.5-4.4-5-4.4c-0.2,0-0.4,0-0.6,0c-2.8,0.4-4.7,2.9-4.4,5.7c0.4,2.8,2.9,4.7,5.7,4.4
-                                                        C224.9,185,226.9,182.4,226.5,179.7z"/>
-                                                    <path class="st4" d="M230.1,180.2c0-0.3,0-0.6-0.1-1c-0.6-4.7-4.9-8-9.6-7.4c-4.7,0.6-8,4.9-7.4,9.6c0.2,1.9,1.1,3.5,2.3,4.8
-                                                        c0.8,0.9,1.8,1.5,3,2c1,0.4,2.1,0.6,3.2,0.6c0.4,0,0.7,0,1.1-0.1c3.1-0.4,5.6-2.4,6.8-5.1C229.8,182.6,230.1,181.4,230.1,180.2z
-                                                            M216.5,181c-0.4-2.8,1.6-5.3,4.4-5.7c0.2,0,0.4,0,0.6,0c2.5,0,4.7,1.9,5,4.4c0.4,2.8-1.6,5.3-4.4,5.7
-                                                        C219.4,185.7,216.9,183.7,216.5,181z"/>
-                                                    <path class="st1" d="M250.7,185.3c2.8-0.4,4.7-2.9,4.4-5.7c-0.3-2.5-2.5-4.4-5-4.4c-0.2,0-0.4,0-0.6,0c-2.8,0.4-4.7,2.9-4.4,5.7
-                                                        C245.4,183.7,247.9,185.7,250.7,185.3z"/>
-                                                    <path class="st4" d="M256.6,185.8c1.5-1.8,2.2-4.1,1.9-6.5c-0.6-4.7-4.9-8-9.6-7.4c-4.3,0.5-7.4,4.2-7.4,8.3c0,0.4,0,0.8,0.1,1.2
-                                                        c0.1,0.8,0.3,1.6,0.6,2.3c1.3,3.1,4.4,5.2,7.9,5.2c0.4,0,0.7,0,1.1-0.1c1-0.1,1.9-0.4,2.7-0.8C254.9,187.4,255.8,186.7,256.6,185.8
-                                                        z M245,181c-0.4-2.8,1.6-5.3,4.4-5.7c0.2,0,0.4,0,0.6,0c2.5,0,4.7,1.9,5,4.4c0.4,2.8-1.6,5.3-4.4,5.7
-                                                        C247.9,185.7,245.4,183.7,245,181z"/>
-                                                    <path class="st4" d="M214.5,169c0,1,0.8,1.8,1.8,1.8s1.8-0.8,1.8-1.8v-5.4h5.4c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8H218v-5.4
-                                                        c0-1-0.8-1.8-1.8-1.8s-1.8,0.8-1.8,1.8v5.4h-5.4c-1,0-1.8,0.8-1.8,1.8s0.8,1.8,1.8,1.8h5.4V169z"/>
-                                                    <path class="st4" d="M246.1,163.7c0.2,0,0.5,0,0.7,0c1.5,0,3-0.5,4.1-1.5c2.8-2.3,3.3-6.5,1-9.3c-2.3-2.8-6.5-3.3-9.3-1
-                                                        c-2.8,2.3-3.3,6.5-1,9.3C242.8,162.6,244.3,163.5,246.1,163.7z M244.8,154.7c0.6-0.5,1.3-0.7,2-0.7c0.9,0,1.8,0.4,2.4,1.2
-                                                        c1.1,1.3,0.9,3.3-0.5,4.4c-0.6,0.5-1.4,0.8-2.3,0.7c-0.8-0.1-1.6-0.5-2.1-1.1C243.3,157.7,243.5,155.8,244.8,154.7z"/>
-                                                    <path class="st4" d="M260.9,170.8c0.2,0,0.5,0,0.7,0c1.5,0,3-0.5,4.1-1.5c1.4-1.1,2.2-2.7,2.4-4.4c0.2-1.8-0.3-3.5-1.4-4.8
-                                                        s-2.7-2.2-4.4-2.4c-1.7-0.2-3.5,0.3-4.8,1.4c-1.4,1.1-2.2,2.7-2.4,4.4c-0.2,1.8,0.3,3.5,1.4,4.8S259.2,170.6,260.9,170.8z
-                                                            M258.5,163.9c0.1-0.8,0.5-1.6,1.1-2.1c0.6-0.5,1.2-0.7,1.9-0.7c0.1,0,0.2,0,0.3,0c0.8,0.1,1.6,0.5,2.1,1.1
-                                                        c0.5,0.6,0.8,1.5,0.7,2.3c-0.1,0.8-0.5,1.6-1.1,2.1c-0.6,0.5-1.5,0.8-2.3,0.7c-0.8-0.1-1.6-0.5-2.1-1.1
-                                                        C258.7,165.5,258.4,164.7,258.5,163.9z"/>
-                                                    <polygon class="st0" points="126.4,169.8 124.4,175.6 128.5,175.6 	"/>
-                                                    <path class="st0" d="M140.9,179c0.5,0,0.9-0.1,1.4-0.3c-0.3-0.2-0.7-0.4-1.1-0.7c-0.4-0.2-0.7-0.4-0.9-0.5
-                                                        c-0.2-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.4,0.2-0.5c0.2-0.1,0.3-0.2,0.5-0.2c0.6,0,1.5,0.5,2.9,1.4c0.4-0.4,0.7-1,0.9-1.6
-                                                        c0.2-0.6,0.3-1.3,0.3-2.1c0-1-0.2-1.9-0.5-2.6c-0.3-0.7-0.8-1.3-1.4-1.7s-1.3-0.6-2.1-0.6c-0.6,0-1.1,0.1-1.6,0.3
-                                                        c-0.5,0.2-0.9,0.5-1.2,0.9c-0.3,0.4-0.6,0.9-0.8,1.5s-0.3,1.3-0.3,2.1c0,1.6,0.4,2.8,1.1,3.7C138.8,178.5,139.7,179,140.9,179z"/>
-                                                    <path class="st0" d="M112,224.3c0-3.3-2.1-5.9-4.7-5.9c-1,0-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8H154v-51.2c0-1-0.2-1.9-0.5-2.7
-                                                        l-2.3-2.7c-0.6-0.3-1.2-0.5-1.9-0.5h-48.6c1.1,1.6,1.8,3.7,1.8,5.9v0.7v1.1v58.9c0,3.3,2.1,5.9,4.7,5.9S112,227.6,112,224.3z
-                                                            M146.7,203.6h-21.5c-1,0-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8h21.5c1,0,1.8,0.8,1.8,1.8S147.7,203.6,146.7,203.6z M134.6,171.1
-                                                        c0.3-0.9,0.7-1.6,1.3-2.3c0.6-0.6,1.3-1.1,2.1-1.4c0.8-0.3,1.8-0.5,2.8-0.5c1.4,0,2.7,0.3,3.7,0.9c1,0.6,1.8,1.4,2.3,2.5
-                                                        c0.5,1.1,0.8,2.3,0.8,3.8c0,2.2-0.6,3.9-1.8,5.2c0.4,0.3,0.9,0.5,1.3,0.8s0.8,0.5,1,0.6s0.2,0.4,0.2,0.7c0,0.2-0.1,0.4-0.3,0.6
-                                                        c-0.2,0.2-0.4,0.3-0.7,0.3c-0.2,0-0.5-0.1-0.8-0.2c-0.3-0.1-0.7-0.3-1.1-0.6c-0.4-0.3-0.9-0.6-1.4-0.9c-0.9,0.5-2,0.7-3.4,0.7
-                                                        c-1.1,0-2-0.2-2.9-0.5c-0.9-0.3-1.6-0.8-2.1-1.5c-0.6-0.6-1-1.4-1.3-2.3s-0.4-1.9-0.4-2.9C134.1,172.9,134.3,172,134.6,171.1z
-                                                            M124,169.5c0.1-0.3,0.2-0.6,0.4-0.9c0.1-0.4,0.3-0.7,0.5-0.9c0.2-0.2,0.4-0.4,0.6-0.6c0.3-0.1,0.6-0.2,1-0.2c0.4,0,0.7,0.1,1,0.2
-                                                        c0.3,0.1,0.5,0.3,0.6,0.6c0.2,0.2,0.3,0.5,0.4,0.8c0.1,0.3,0.2,0.6,0.4,1.1l3.6,8.9c0.3,0.7,0.4,1.2,0.4,1.5c0,0.3-0.1,0.6-0.4,0.9
-                                                        c-0.3,0.3-0.6,0.4-1,0.4c-0.2,0-0.4,0-0.6-0.1c-0.2-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.2-0.3-0.3-0.6c-0.1-0.3-0.2-0.5-0.3-0.7
-                                                        l-0.7-1.7h-5.6l-0.7,1.8c-0.3,0.7-0.5,1.2-0.7,1.4s-0.5,0.4-0.9,0.4c-0.4,0-0.7-0.1-0.9-0.4c-0.3-0.3-0.4-0.6-0.4-0.9
-                                                        c0-0.2,0-0.4,0.1-0.6c0.1-0.2,0.2-0.5,0.3-0.8L124,169.5z M110.8,168.8c0-0.4,0.1-0.7,0.2-1s0.3-0.4,0.6-0.6c0.3-0.1,0.6-0.2,1-0.2
-                                                        h6.6c0.4,0,0.8,0.1,1,0.3s0.3,0.5,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8s-0.5,0.3-1,0.3h-5.5v3.5h4.6c0.4,0,0.7,0.1,1,0.3
-                                                        c0.2,0.2,0.3,0.4,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8c-0.2,0.2-0.5,0.3-1,0.3h-4.6v4.6c0,0.6-0.1,1-0.4,1.3c-0.3,0.3-0.6,0.4-1,0.4
-                                                        c-0.4,0-0.8-0.1-1-0.4s-0.4-0.7-0.4-1.3V168.8z M112.4,190.2h17.8c1,0,1.8,0.8,1.8,1.8s-0.8,1.8-1.8,1.8h-17.8
-                                                        c-1,0-1.8-0.8-1.8-1.8S111.4,190.2,112.4,190.2z"/>
-                                                    <path class="st1" d="M155.8,218.4h-42.1c1.1,1.6,1.8,3.7,1.8,5.9c0,0.3,0,0.6,0,0.9c0,0.1,0,0.2,0,0.3c0,0.2,0,0.4-0.1,0.6
-                                                        c0,0.1,0,0.2-0.1,0.3c0,0.2-0.1,0.4-0.1,0.5c0,0.1-0.1,0.2-0.1,0.3c0,0.2-0.1,0.3-0.2,0.5c0,0.1-0.1,0.2-0.1,0.3
-                                                        c-0.1,0.2-0.1,0.3-0.2,0.5c0,0.1-0.1,0.2-0.1,0.3c-0.1,0.2-0.2,0.4-0.3,0.6c0,0,0,0.1-0.1,0.1c-0.1,0.2-0.3,0.4-0.4,0.6h42.1
-                                                        c2.6,0,4.7-2.6,4.7-5.9S158.4,218.4,155.8,218.4z"/>
-                                                    <path class="st3" d="M157.5,215.1v-51.5c0-5.2-3.7-9.4-8.2-9.4h-55c-4.5,0-8.2,4.2-8.2,9.4v1.8h13v58.9c0,5.2,3.7,9.4,8.2,9.4h48.5
-                                                        c4.5,0,8.2-4.2,8.2-9.4C164,219.8,161.2,216.1,157.5,215.1z M155.8,230.2h-42.1c0.1-0.2,0.3-0.4,0.4-0.6c0,0,0-0.1,0.1-0.1
-                                                        c0.1-0.2,0.2-0.4,0.3-0.6c0-0.1,0.1-0.2,0.1-0.3c0.1-0.2,0.1-0.3,0.2-0.5c0-0.1,0.1-0.2,0.1-0.3c0.1-0.2,0.1-0.3,0.2-0.5
-                                                        c0-0.1,0.1-0.2,0.1-0.3c0-0.2,0.1-0.3,0.1-0.5c0-0.1,0-0.2,0.1-0.3c0-0.2,0.1-0.4,0.1-0.6c0-0.1,0-0.2,0-0.3c0-0.3,0-0.6,0-0.9
-                                                        c0-2.2-0.7-4.3-1.8-5.9h42.1c2.6,0,4.7,2.6,4.7,5.9S158.4,230.2,155.8,230.2z M155.8,216.7L155.8,216.7L155.8,216.7z M155.8,163.7
-                                                        L155.8,163.7L155.8,163.7z M94.2,157.8c2.1,0,3.9,1.8,4.5,4.2h-9.1C90.3,159.5,92.1,157.8,94.2,157.8z M102.5,224.3v-58.9v-1.1
-                                                        v-0.7c0-2.2-0.7-4.3-1.8-5.9h48.6c0.7,0,1.3,0.2,1.9,0.5c1,0.6,1.8,1.5,2.3,2.7c0.3,0.8,0.5,1.7,0.5,2.7v51.2h-46.8
-                                                        c-1,0-1.8,0.8-1.8,1.8s0.8,1.8,1.8,1.8c2.6,0,4.7,2.6,4.7,5.9s-2.1,5.9-4.7,5.9S102.5,227.6,102.5,224.3z"/>
-                                                    <path class="st1" d="M151.2,158.3l2.3,2.7C153,159.8,152.2,158.8,151.2,158.3z"/>
-                                                    <path class="st1" d="M98.8,161.9c-0.6-2.4-2.4-4.2-4.5-4.2s-3.9,1.8-4.5,4.2H98.8z"/>
-                                                    <line class="st5" x1="155.8" y1="216.7" x2="155.8" y2="216.7"/>
-                                                    <line class="st5" x1="155.8" y1="163.7" x2="155.8" y2="163.7"/>
-                                                    <path class="st4" d="M112.2,181.2c0.4,0,0.7-0.1,1-0.4c0.3-0.3,0.4-0.7,0.4-1.3v-4.6h4.6c0.4,0,0.7-0.1,1-0.3
-                                                        c0.2-0.2,0.3-0.4,0.3-0.8c0-0.3-0.1-0.6-0.3-0.8c-0.2-0.2-0.5-0.3-1-0.3h-4.6v-3.5h5.5c0.4,0,0.8-0.1,1-0.3s0.3-0.5,0.3-0.8
-                                                        c0-0.3-0.1-0.6-0.3-0.8s-0.5-0.3-1-0.3h-6.6c-0.4,0-0.7,0.1-1,0.2c-0.3,0.1-0.4,0.3-0.6,0.6s-0.2,0.6-0.2,1v10.7
-                                                        c0,0.6,0.1,1,0.4,1.3S111.8,181.2,112.2,181.2z"/>
-                                                    <path class="st4" d="M120.1,179.9c0,0.3,0.1,0.6,0.4,0.9c0.3,0.3,0.6,0.4,0.9,0.4c0.4,0,0.7-0.1,0.9-0.4s0.4-0.7,0.7-1.4l0.7-1.8
-                                                        h5.6l0.7,1.7c0.1,0.2,0.2,0.5,0.3,0.7c0.1,0.3,0.2,0.5,0.3,0.6c0.1,0.1,0.2,0.2,0.4,0.3c0.2,0.1,0.3,0.1,0.6,0.1
-                                                        c0.4,0,0.7-0.1,1-0.4c0.3-0.3,0.4-0.6,0.4-0.9c0-0.3-0.1-0.8-0.4-1.5l-3.6-8.9c-0.2-0.4-0.3-0.8-0.4-1.1c-0.1-0.3-0.2-0.5-0.4-0.8
-                                                        c-0.2-0.2-0.4-0.4-0.6-0.6c-0.3-0.1-0.6-0.2-1-0.2c-0.4,0-0.7,0.1-1,0.2c-0.3,0.1-0.5,0.3-0.6,0.6c-0.2,0.2-0.3,0.5-0.5,0.9
-                                                        c-0.1,0.4-0.3,0.7-0.4,0.9l-3.5,9c-0.1,0.4-0.2,0.6-0.3,0.8C120.1,179.6,120.1,179.7,120.1,179.9z M126.4,169.8l2.1,5.7h-4.1
-                                                        L126.4,169.8z"/>
-                                                    <path class="st4" d="M135.8,179.2c0.6,0.6,1.3,1.1,2.1,1.5c0.9,0.3,1.8,0.5,2.9,0.5c1.3,0,2.4-0.2,3.4-0.7c0.5,0.4,0.9,0.7,1.4,0.9
-                                                        c0.4,0.3,0.8,0.5,1.1,0.6c0.3,0.1,0.6,0.2,0.8,0.2c0.3,0,0.5-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.6c0-0.3-0.1-0.5-0.2-0.7
-                                                        s-0.5-0.4-1-0.6s-0.9-0.5-1.3-0.8c1.2-1.3,1.8-3,1.8-5.2c0-1.4-0.3-2.7-0.8-3.8c-0.5-1.1-1.3-1.9-2.3-2.5c-1-0.6-2.3-0.9-3.7-0.9
-                                                        c-1.1,0-2,0.2-2.8,0.5c-0.8,0.3-1.5,0.8-2.1,1.4c-0.6,0.6-1,1.4-1.3,2.3c-0.3,0.9-0.5,1.9-0.5,2.9c0,1,0.1,2,0.4,2.9
-                                                        S135.3,178.6,135.8,179.2z M137.2,171.9c0.2-0.6,0.5-1.1,0.8-1.5c0.3-0.4,0.8-0.7,1.2-0.9c0.5-0.2,1-0.3,1.6-0.3
-                                                        c0.8,0,1.5,0.2,2.1,0.6s1.1,0.9,1.4,1.7c0.3,0.7,0.5,1.6,0.5,2.6c0,0.8-0.1,1.5-0.3,2.1c-0.2,0.6-0.5,1.1-0.9,1.6
-                                                        c-1.3-1-2.3-1.4-2.9-1.4c-0.2,0-0.4,0.1-0.5,0.2c-0.2,0.1-0.2,0.3-0.2,0.5c0,0.2,0.1,0.4,0.2,0.5c0.2,0.1,0.5,0.3,0.9,0.5
-                                                        c0.4,0.2,0.8,0.4,1.1,0.7c-0.5,0.2-1,0.3-1.4,0.3c-1.1,0-2.1-0.4-2.8-1.3c-0.7-0.9-1.1-2.1-1.1-3.7
-                                                        C136.9,173.2,137,172.5,137.2,171.9z"/>
-                                                    <path class="st4" d="M112.4,193.7h17.8c1,0,1.8-0.8,1.8-1.8s-0.8-1.8-1.8-1.8h-17.8c-1,0-1.8,0.8-1.8,1.8S111.4,193.7,112.4,193.7z
-                                                        "/>
-                                                    <path class="st4" d="M146.7,200.1h-21.5c-1,0-1.8,0.8-1.8,1.8s0.8,1.8,1.8,1.8h21.5c1,0,1.8-0.8,1.8-1.8S147.7,200.1,146.7,200.1z"
-                                                        />
-                                                    <path class="st0" d="M27.6,84.3v8.4c0,1.8,1.5,3.3,3.3,3.3H66c1.8,0,3.3-1.5,3.3-3.3v-8.4H27.6z M49.6,91.6
-                                                        c-0.9,0.7-2.2,0.5-2.8-0.4c-0.7-0.9-0.5-2.2,0.4-2.8c0.9-0.7,2.2-0.5,2.8,0.4C50.7,89.7,50.5,90.9,49.6,91.6z"/>
-                                                    <path class="st0" d="M27.6,27.3v5.5h26.3V26c0-0.7,0.1-1.3,0.3-2H30.9C29.1,24,27.6,25.5,27.6,27.3z"/>
-                                                    <line class="st6" x1="71.4" y1="82.2" x2="71.4" y2="82.2"/>
-                                                    <line class="st6" x1="25.5" y1="82.2" x2="25.5" y2="82.2"/>
-                                                    <line class="st6" x1="25.5" y1="34.9" x2="25.5" y2="34.9"/>
-                                                    <path class="st3" d="M53.9,32.8H27.6v-5.5c0-1.8,1.5-3.3,3.3-3.3h23.3c0.8-2.4,3.1-4.2,5.8-4.2H30.9c-4.1,0-7.5,3.4-7.5,7.5v65.4
-                                                        c0,4.1,3.4,7.5,7.5,7.5H66c4.1,0,7.5-3.4,7.5-7.5V71.6c0-1.2-0.9-2.1-2.1-2.1s-2.1,0.9-2.1,2.1v8.5H27.6V37h26.3V32.8z M25.5,34.9
-                                                        L25.5,34.9L25.5,34.9z M25.5,82.2L25.5,82.2L25.5,82.2z M66,96H30.9c-1.8,0-3.3-1.5-3.3-3.3v-8.4h41.7v8.4C69.3,94.5,67.8,96,66,96
-                                                        z M71.4,82.2L71.4,82.2L71.4,82.2z"/>
-                                                    <path class="st3" d="M47.2,88.4c-0.9,0.7-1.1,1.9-0.4,2.8c0.7,0.9,1.9,1.1,2.8,0.4c0.9-0.7,1.1-1.9,0.4-2.8
-                                                        C49.4,87.9,48.1,87.7,47.2,88.4z"/>
-                                                    <path class="st1" d="M90.4,24H66H60c-1.1,0-2,0.9-2,2v17.4c0,1.1,0.9,2,2,2h2.6c0.6,0,1.1,0.2,1.5,0.6c0.4,0.4,0.6,0.9,0.6,1.5
-                                                        l0,0.1l2.7-1.9c0.3-0.2,0.8-0.4,1.2-0.4h21.9c1.1,0,2-0.9,2-2V26C92.4,24.9,91.5,24,90.4,24z M64.7,37.5c-1.4,0-2.6-1.2-2.6-2.6
-                                                        s1.2-2.6,2.6-2.6c1.4,0,2.6,1.2,2.6,2.6S66.1,37.5,64.7,37.5z M75.2,37.5c-1.4,0-2.6-1.2-2.6-2.6s1.2-2.6,2.6-2.6
-                                                        c1.4,0,2.6,1.2,2.6,2.6S76.7,37.5,75.2,37.5z M85.4,37.5c-1.4,0-2.6-1.2-2.6-2.6s1.2-2.6,2.6-2.6s2.6,1.2,2.6,2.6
-                                                        S86.8,37.5,85.4,37.5z"/>
-                                                    <path class="st4" d="M90.4,19.8H66H60c-2.7,0-5,1.7-5.8,4.2c-0.2,0.6-0.3,1.3-0.3,2v6.8V37v6.3c0,3.4,2.7,6.1,6.1,6.1h0.4l-0.1,2.1
-                                                        c0,0.8,0.4,1.5,1.1,1.9c0.3,0.2,0.7,0.3,1,0.3c0.4,0,0.8-0.1,1.2-0.4l5.5-3.8h21.2c3.4,0,6.1-2.7,6.1-6.1V26
-                                                        C96.6,22.6,93.8,19.8,90.4,19.8z M92.4,43.3c0,1.1-0.9,2-2,2H68.5c-0.4,0-0.8,0.1-1.2,0.4l-2.7,1.9l0-0.1c0-0.6-0.2-1.1-0.6-1.5
-                                                        c-0.4-0.4-0.9-0.6-1.5-0.6H60c-1.1,0-2-0.9-2-2V26c0-1.1,0.9-2,2-2H66h24.5c1.1,0,2,0.9,2,2V43.3z"/>
-                                                    <path class="st3" d="M64.8,34.9c0-0.1-0.1-0.2-0.2-0.2c-0.1,0-0.2,0.1-0.2,0.2C64.5,35.1,64.8,35.1,64.8,34.9z"/>
-                                                    <path class="st4" d="M67.3,34.9c0-1.4-1.2-2.6-2.6-2.6c-1.4,0-2.6,1.2-2.6,2.6s1.2,2.6,2.6,2.6C66.1,37.5,67.3,36.3,67.3,34.9z
-                                                            M64.7,34.7c0.1,0,0.2,0.1,0.2,0.2c0,0.2-0.4,0.2-0.4,0C64.5,34.8,64.6,34.7,64.7,34.7z"/>
-                                                    <path class="st3" d="M75.2,34.7c-0.1,0-0.2,0.1-0.2,0.2c0,0.2,0.4,0.2,0.4,0C75.4,34.8,75.3,34.7,75.2,34.7z"/>
-                                                    <path class="st4" d="M75.2,32.3c-1.4,0-2.6,1.2-2.6,2.6s1.2,2.6,2.6,2.6c1.4,0,2.6-1.2,2.6-2.6S76.7,32.3,75.2,32.3z M75.1,34.9
-                                                        c0-0.1,0.1-0.2,0.2-0.2s0.2,0.1,0.2,0.2C75.4,35.1,75.1,35.1,75.1,34.9z"/>
-                                                    <path class="st3" d="M85.4,34.7c-0.1,0-0.2,0.1-0.2,0.2c0,0.2,0.4,0.2,0.4,0C85.6,34.8,85.5,34.7,85.4,34.7z"/>
-                                                    <path class="st4" d="M85.4,32.3c-1.4,0-2.6,1.2-2.6,2.6s1.2,2.6,2.6,2.6s2.6-1.2,2.6-2.6S86.8,32.3,85.4,32.3z M85.2,34.9
-                                                        c0-0.1,0.1-0.2,0.2-0.2s0.2,0.1,0.2,0.2C85.6,35.1,85.2,35.1,85.2,34.9z"/>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        <strong>분실물 문의</strong>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //help -->
-    
-    
-    <footer id="footer">
-        <div id="footer_sns">
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(assets/img/slide/hero.jpeg)">
+          <div class="carousel-container">
             <div class="container">
-                <div class="footer_sns">
-                    <ul>
-                        <li class="icon s1"><a href="#"><span class="ir_pm">트위터</span></a></li>
-                        <li class="icon s2"><a href="#"><span class="ir_pm">페이스북</span></a></li>
-                        <li class="icon s3"><a href="#"><span class="ir_pm">인스타그램</span></a></li>
-                        <li class="icon s4"><a href="#"><span class="ir_pm">구글 플레이</span></a></li>
-                        <li class="icon s5"><a href="#"><span class="ir_pm">아이폰 앱스토어</span></a></li>
-                    </ul>    
-                    <div class="tel">
-                        <a href="#">ARS <em>1544-0070</em></a>
-                    </div>
-                </div>
+              <h2 class="animate__animated animate__fadeInDown">영웅</h2>
+              <p class="animate__animated animate__fadeInUp">
+              	적진 한복판에서 목숨을 걸고 정보를 수집하던 독립군의 정보원 ‘설희’(김고은)는 
+              	이토 히로부미가 곧 러시아와의 회담을 위해 하얼빈을 찾는다는 일급 기밀을 다급히 전한다. 
+              	드디어 1909년 10월 26일, 이날만을 기다리던 안중근은 하얼빈역에 도착한 이토 히로부미를 향해 주저 없이 방아쇠를 당긴다. 
+              	현장에서 체포된 그는 전쟁 포로가 아닌 살인의 죄목으로, 조선이 아닌 일본 법정에 서게 되는데… 누가 죄인인가, 누가 영웅인가!</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">예매하기</a>
             </div>
+          </div>
         </div>
-        <div id="footer_infor">
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(assets/img/slide/gentlemen.jpg)">
+          <div class="carousel-container">
             <div class="container">
-                <div class="row">
-                    <div class="footer_infor">
-                        <h2><img src="assets/img/logo_footer.png" alt="megabox"></h2>
-                        <ul>
-                            <li><a href="#">회사소개</a></li>
-                            <li><a href="#">채용정보</a></li>
-                            <li><a href="#">제휴/광고/부대사업 문의</a></li>
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">개인정보처리방침</a></li>
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="#">윤리경영</a></li>
-                        </ul>
-                        <address>
-                            <p>서울특별시 강남구 도산대로 156, 2층 메가박스중앙(주) (논현동, 중앙엠앤비사옥)<br><span class="bar2">대표자명 김진선</span> 개인정보보호 책임자 경영지원실 실장 박영진<br><span class="bar2">사업자등록번호 211-86-59478</span> 통신판매업신고번호 제 833호</p>
-                            <p>Copyright 2014 by MegaboxJoongAng Inc. All right reserved</p>
-                        </address>
-                    </div>
-                </div>
+              <h2 class="animate__animated animate__fadeInDown">젠틀맨</h2>
+              <p class="animate__animated animate__fadeInUp">
+              	누명을 벗고자 하는 ‘지현수’와 ‘권도훈’을 잡고 싶은 ‘김화진’,
+ 				각자의 목표를 위해 손을 잡게 된 두 사람은
+ 				거대 로펌 재벌의 추악한 범죄를 파헤치다 전혀 뜻밖의 상황을 맞이하게 되는데...
+ 				작전은 완벽하게, 수사는 젠틀하게! 고품격 범죄 오락이 펼쳐진다!
+              </p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">예매하기</a>
             </div>
+          </div>
         </div>
-    </footer>
-    <!-- //footer -->
-    
 
-    <!-- 트레일러 -->
-    <aside role="complementary" id="blackout" class="overlay">
-        <div id="trailerModal" class="modal">
-            <div id="trailer"></div><!-- YouTube 플레이어로 대체되는 부분 -->
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services section-bg">
+      <div class="container">
+        <div class="row no-gutters" align="center">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-laptop"></i></div>
+              <h4 class="title"><a href="">상영시간표</a></h4>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" align="center">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-briefcase"></i></div>
+              <h4 class="title"><a href="">박스오피스</a></h4>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" align="center">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+              <h4 class="title"><a href="">빠른예매</a></h4>
+            </div>
+          </div>
         </div>
-        <button id="hideTrailer" class="modal_close">닫기</button>
-    </aside>
-    
-    
-    <!-- 자바스크립트 라이브러리 -->
-    <script src="assets/js/jquery.min_1.12.4.js"></script>
-    <script src="assets/js/modernizr-custom.js"></script>
-    <script src="assets/js/ie-checker.js"></script>
-    <script src="assets/js/swiper.min.js"></script>
-    <script src="assets/js/iframe_api.js"></script>
-    <script src="assets/js/movie.js"></script>
-    <script>
-        //배너 이미지 슬라이드
-        var swiper = new Swiper('.swiper-container',{
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 5000,
-            },
-        });
-        
-        //영화차트 이미지 슬라이드
-        var swiper = new Swiper('.swiper-container2',{
-            slidesPerView: 4,
-            spaceBetween: 24,
-//            mousewheel: {
-//                invert: true,
-//            },
-            keyboard: {
-                enabled: true,
-                onlyInViewport: false,
-            },
-            autoplay: {
-                delay: 6000,
-            },
-            breakpoints: {
-                600: {
-                    slidesPerView: 1.4,
-                    spaceBetween: 24
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 24
-                },
-                960: {
-                    slidesPerView: 3,
-                    spaceBetween: 24
-                }
-            }
-        });
-        
-        //영화차트 탭 메뉴
-        var movBtn = $(".movie_title > ul > li");    
-        var movCont = $(".movie_chart > div");  
 
-        movCont.hide().eq(0).show();
+      </div>
+    </section><!-- End Featured Services Section -->
 
-        movBtn.click(function(e){
-            e.preventDefault();
-            var target = $(this);         
-            var index = target.index();  
-            movBtn.removeClass("active");   
-            target.addClass("active");    
-            movCont.css("display","none");
-            movCont.eq(index).css("display","block");
-        });
-        
-        //공지사항 탭 메뉴
-        var tabMenu = $(".notice");
+    <!-- ======= 혜택(EVENT) Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
 
-        //컨텐츠 내용을 숨겨주세요!
-        tabMenu.find("ul > li > ul").hide();
-        tabMenu.find("li.active > ul").show();
+        <div class="section-title">
+          <h2>혜택</h2>
+        </div>
 
-        function tabList(e){
-            e.preventDefault();       //#의 기능을 차단
-            var target = $(this);
-            target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
-            //버튼을 클릭하면 ~ div를 보여주고
-            //부모의 li 태그에 클래스 추가하고
-            //형제의 li 태그에 클래스 제거하고
-            //제거한 자식의 div 태그를 숨겨줌 
-        }
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="assets/img/event.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <img src="assets/img/event2.png" class="img-fluid" alt="">
+            <p class="fst-italic">
+            	이벤트칸입니다.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circled"></i> 이벤트칸입니다.</li>
+              <li><i class="bi bi-check-circled"></i> 이벤트칸입니다.</li>
+              <li><i class="bi bi-check-circled"></i> 이벤트칸입니다.</li>
+            </ul>
+            <p>
+             이벤트칸입니다.
+            </p>
+          </div>
+        </div>
 
-        tabMenu.find("ul > li > a").click(tabList).focus(tabList);
-        
-    </script>
+      </div>
+    </section>  <!-- ======= 혜택(EVENT) Section 끝======= -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 col-md-6 content-item">
+            <span>01</span>
+            <h4>Lorem Ipsum</h4>
+            <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item">
+            <span>02</span>
+            <h4>Repellat Nihil</h4>
+            <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item">
+            <span>03</span>
+            <h4> Ad ad velit qui</h4>
+            <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item">
+            <span>04</span>
+            <h4>Repellendus molestiae</h4>
+            <p>Inventore quo sint a sint rerum. Distinctio blanditiis deserunt quod soluta quod nam mider lando casa</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item">
+            <span>05</span>
+            <h4>Sapiente Magnam</h4>
+            <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 content-item">
+            <span>06</span>
+            <h4>Facilis Impedit</h4>
+            <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Our Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Clients</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Our Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
+                </svg>
+                <i class="bx bxl-dribbble"></i>
+              </div>
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-orange ">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
+                </svg>
+                <i class="bx bx-file"></i>
+              </div>
+              <h4><a href="">Sed Perspiciatis</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-pink">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
+                </svg>
+                <i class="bx bx-tachometer"></i>
+              </div>
+              <h4><a href="">Magni Dolores</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-yellow">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                </svg>
+                <i class="bx bx-layer"></i>
+              </div>
+              <h4><a href="">Nemo Enim</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-red">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
+                </svg>
+                <i class="bx bx-slideshow"></i>
+              </div>
+              <h4><a href="">Dele Cardo</a></h4>
+              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-teal">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
+                </svg>
+                <i class="bx bx-arch"></i>
+              </div>
+              <h4><a href="">Divera Don</a></h4>
+              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Call To Action</h3>
+            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/team/team-1.jpg" alt="">
+              <h4>Walter White</h4>
+              <span>Chief Executive Officer</span>
+              <p>
+                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/team/team-2.jpg" alt="">
+              <h4>Sarah Jhinson</h4>
+              <span>Product Manager</span>
+              <p>
+                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/team/team-3.jpg" alt="">
+              <h4>William Anderson</h4>
+              <span>CTO</span>
+              <p>
+                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6 mt-3 mt-md-0">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+<!-- ---------------footer------------- -->
+<footer id="header">
+	<jsp:include page="/inc/bottom.jsp"></jsp:include>
+</footer>
+<!-- ---------------footer------------- -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>

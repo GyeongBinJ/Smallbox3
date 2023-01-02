@@ -9,6 +9,7 @@ import java.util.List;
 
 import db.JdbcUtil;
 import vo.MovieBean;
+import vo.MovieLikeBean;
 
 public class MovieDAO {
 
@@ -50,7 +51,7 @@ public class MovieDAO {
 			}
 			
 			// 2. 영화 등록
-			sql = "INSERT INTO movie VALUES(?,?,?,?,?,?,?,?,?,?)";
+			sql = "INSERT INTO movie VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 			pstmt2 = con.prepareStatement(sql);
 			pstmt2.setInt(1, movie_idx);
 			pstmt2.setString(2, movie.getMovie_title());
@@ -61,7 +62,7 @@ public class MovieDAO {
 			pstmt2.setString(7, movie.getMovie_intro());
 			pstmt2.setString(8, movie.getMovie_actors());
 			pstmt2.setString(9, movie.getMovie_picture());
-//			pstmt2.setString(10, movie.getMovie_real_picture());
+			pstmt2.setString(10, movie.getMovie_real_picture());
 			pstmt2.setInt(11, movie.getMovie_viewer()); // 디폴트 0
 			
 			insertCount = pstmt2.executeUpdate();
@@ -105,7 +106,7 @@ public class MovieDAO {
 				movie.setMovie_intro(rs.getString("movie_intro"));
 				movie.setMovie_actors(rs.getString("movie_actors"));
 				movie.setMovie_picture(rs.getString("movie_picture"));
-//				movie.setMovie_real_picture(rs.getString("movie_real_picture"));
+				movie.setMovie_real_picture(rs.getString("movie_real_picture"));
 				movie.setMovie_viewer(rs.getInt("movie_viewer"));
 				
 				movieList.add(movie);
@@ -173,7 +174,7 @@ public class MovieDAO {
 				movie.setMovie_intro(rs.getString("movie_intro"));
 				movie.setMovie_actors(rs.getString("movie_actors"));
 				movie.setMovie_picture(rs.getString("movie_picture"));
-//				movie.setMovie_real_picture(rs.getString("movie_real_picture"));
+				movie.setMovie_real_picture(rs.getString("movie_real_picture"));
 				movie.setMovie_viewer(rs.getInt("movie_viewer"));
 			}
 			
@@ -212,7 +213,7 @@ public class MovieDAO {
 			// 파일명(movie_picture)이 null이 아닐 경우에만 (= 수정폼에서 파일을 수정할 경우) 에만 파일명 수정
 			if(movie.getMovie_picture() != null) {
 				pstmt.setString(8, movie.getMovie_picture());
-//				pstmt.setString(9, movie.getMovie_real_picture());
+				pstmt.setString(9, movie.getMovie_real_picture());
 				pstmt.setInt(10, movie.getMovie_viewer()); // 디폴트 0
 				pstmt.setInt(11, movie.getMovie_idx()); 
 			} else { // 파일 수정 안하면 기존 파일 유지
@@ -300,7 +301,103 @@ public class MovieDAO {
 		return deletelikeCount;
 	}
 
+	// 마이페이지 찜 목록 - 찜한 영화의 정보 뿌리기
+	public List<MovieBean> selectLikeList(String member_id, int startRow, int movieLimit) {
+		List<MovieBean> likeList = null;
+		
+		try {
+			// 1. WHERE절로 각 회원별 찜 목록을 조회
+			// 2. movie 테이블의 movie_idx와 movie_like 테이블의 movie_idx을 조인해 movie 테이블의 모든 컬럼 조회
+			// => (찜 목록에서 뿌릴 정보만 가져와도 됨)
+			String sql = "SELECT DISTINCT * FROM movie JOIN movie_like ON movie.movie_idx = movie_like.movie_idx WHERE member_id = ? LIMIT ?,?";
+//			String sql = "SELECT DISTINCT * FROM movie JOIN movie_like ON movie.movie_idx = movie_like.movie_idx WHERE member_id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, member_id);
+			pstmt.setInt(2, startRow);
+			pstmt.setInt(3, movieLimit);
+			rs = pstmt.executeQuery();
+			
+			likeList = new ArrayList<MovieBean>();
+			
+			while(rs.next()) {
+				MovieBean movie = new MovieBean();
+				movie.setMovie_idx(rs.getInt("movie_idx"));
+				movie.setMovie_title(rs.getString("movie_title"));
+				movie.setMovie_grade(rs.getString("movie_grade"));
+				movie.setMovie_genre(rs.getString("movie_genre"));
+				movie.setMovie_open_date(rs.getDate("movie_open_date"));
+				movie.setMovie_runtime(rs.getInt("movie_runtime"));
+				movie.setMovie_intro(rs.getString("movie_intro"));
+				movie.setMovie_actors(rs.getString("movie_actors"));
+				movie.setMovie_picture(rs.getString("movie_picture"));
+				movie.setMovie_real_picture(rs.getString("movie_real_picture"));
+				movie.setMovie_viewer(rs.getInt("movie_viewer"));
+				
+				// 찜정보 likeList에 MovieBean(영화정보) 객체 저장
+				likeList.add(movie);
+			}
+			
+		} catch (SQLException e) {
+			System.out.println("SQL 구문 오류! - selectLikeList");
+			e.printStackTrace();
+		} finally {
+			JdbcUtil.close(pstmt);
+			JdbcUtil.close(rs);
+		}
+		
+		return likeList;
+	}
 
+	// 찜이 되어있는지 조회 (1 이상이면 찜O / 0이면 찜X)
+	public int selectLike(int movie_idx, String member_id) {
+		int likeCount = 0;
+		
+		try {
+			String sql = "SELECT COUNT(*) FROM movie_like WHERE movie_idx = ? AND member_id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, movie_idx);
+			pstmt.setString(2, member_id);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				likeCount = rs.getInt(1);
+			}
+			
+		} catch (SQLException e) {
+			System.out.println("SQL 구문 오류! - selectLike()");
+			e.printStackTrace();
+		} finally {
+			JdbcUtil.close(pstmt);
+			JdbcUtil.close(rs);
+		}
+		
+		return likeCount;
+	}
+
+	// // 각 멤버(member_id로 구분)가 찜한 영화의 총 개수 조회
+	public int selectLikeMovieCount(String member_id) {
+		int movieCount = 0;
+		
+		try {
+			String sql = "SELECT Count(*) FROM movie_like WHERE member_id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, member_id);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				movieCount = rs.getInt(1);
+			}
+			
+		} catch (SQLException e) {
+			System.out.println("SQL 구문 오류! - selectLikeMovieCount()");
+			e.printStackTrace();
+		} finally {
+			JdbcUtil.close(pstmt);
+			JdbcUtil.close(rs);
+		}
+		
+		return movieCount;
+	}
 
 
 	

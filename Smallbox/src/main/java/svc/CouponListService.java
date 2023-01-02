@@ -4,33 +4,41 @@ import java.sql.Connection;
 import java.util.List;
 
 import dao.CouponDAO;
-import dao.MemberDAO;
 import db.JdbcUtil;
 import vo.CouponBean;
-import vo.MemberBean;
 
 public class CouponListService {
-
-	public List<CouponBean> getCouponList(String member_id) {
+	
+	// 마이페이지 - 각 회원(member_id)의 쿠폰 내역 조회
+	public List<CouponBean> getCouponList(String member_id, int startRow, int couponLimit) {
 		List<CouponBean> couponList = null;
 		
-		// 공통작업-1. Connection 객체 가져오기
 		Connection con = JdbcUtil.getConnection();
-		
-		// 공통작업-2. BoardDAO 객체 가져오기
 		CouponDAO dao = CouponDAO.getInstance();
-		
-		// 공통작업-3. BoardDAO 객체에 Connection 객체 전달하기
 		dao.setConnection(con);
 		
-		couponList = dao.selectCouponList(member_id);
+		// DAO에서 DB작업을 수행해서 조회한 각 회원(member_id)의 쿠폰 정보를 저장해 액션으로 리턴
+		couponList = dao.selectMemberCouponList(member_id, startRow, couponLimit);
 		
-		
-		// 공통작업-4. Connection 객체 반환하기
 		JdbcUtil.close(con);
 		
 		return couponList;
 	}
 
+	// 마이페이지 - 회원별 쿠폰 보유갯수 조회
+	public int getCouponListCount(String member_id) {
+		int couponCount = 0;
+		
+		Connection con = JdbcUtil.getConnection();
+		CouponDAO dao = CouponDAO.getInstance();
+		dao.setConnection(con);
+		
+		// DAO에서 DB작업을 수행해서 조회한 쿠폰의 총 갯수를 변수에 저장
+		couponCount = dao.selectMemberCouponCount(member_id);
+		
+		JdbcUtil.close(con);
+
+		return couponCount;
+	}
 
 }

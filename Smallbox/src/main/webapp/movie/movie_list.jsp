@@ -6,16 +6,19 @@
 <html lang="kr">
 
 <head>
-<!-- ----------------------------------------들고다니세요-------------------------------------------------------------------------- -->
-<!-- css -->
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/swiper.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>SMALLBOX</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
 
 <!-- Favicons -->
 <link href="assets/img/favicon.png" rel="icon">
 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 <!-- Vendor CSS Files -->
 <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -24,46 +27,30 @@
 <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-<link href="assets/css/style.css" rel="stylesheet">
-<!-- ----------------------------------------들고다니세요-------------------------------------------------------------------------- --> 
-<link href="assets/css/Liststyles.css" rel="stylesheet">
-
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-<title>SMALLBOX</title>
-<meta content="" name="description">
-<meta content="" name="keywords">
   
-<!-- ajax -->
+<link href="assets/css/style.css" rel="stylesheet">
+ 
+ <!-- ajax -->
 <script src="js/jquery-3.6.3.js"></script>
 <script type="text/javascript">
+	// 영화목록 페이지 접속시 찜여부 확인
 	$(document).ready(function(){
-	    $('#btn_like').click(function(){
 	      $.ajax({
 	      type: 'POST',
-	      url: 'MovieLikePro.mv', 
+	      url: 'CheckMovieLikePro.mv', 
 	      data: { 
 	    	  "member_id" : ${sessionScope.sId},
 	    	  "movie_idx" : ${movie.movie_idx} 
 	      },
 	      success: function(data) {
-	        if(data) {
-	        $("#btn_like<?php echo $row['is_id'];?>").html(data);
+	    	  console.log(${sessionScope.isLike }))
+	        if(${sessionScope.isLike }) {
+	        $("#btn_like").
 	        } 
 	      }
 	      });
 	    });    
 	  });
-
-// 	$.ajax({
-// 		type: "post", 
-// 		url: "http://localhost:8080/MVC_Board/MemberLoginPro.me",
-// 		success: function(response) { 
-// 			$("#resultArea").html(response);
-// 		}
-// 	});
 
 </script>
 <!-- ajax -->
@@ -113,18 +100,19 @@
                 <div class="card-body">
                 <h5 class="card-title" style="text-align: center;">${movie.movie_title }</h5>
                 <h5 class="card-date" style="text-align: center;">개봉일 ${movie.movie_open_date }</h5>
+                <h5 class="card-date" style="text-align: center;">${sessionScope.isLike }</h5>
                 <P class="card-star" style="text-align: center;">⭐⭐⭐</P> <!-- 평균낸 별점과 자바스크립트 들어가면 될듯 -->
                 <div class="text-center"> 
-<%--                 <a class="btn btn-outline-dark mt-auto" href="MovieLikePro.mv?member_id=${sessionScope.sId }&movie_idx=${movie.movie_idx}">찜</a>   			 --%>
+                <a class="btn btn-outline-dark mt-auto" href="MovieLikePro.mv?member_id=${sessionScope.sId }&movie_idx=${movie.movie_idx}">찜</a>   			
 <!--                    <a class="btn btn-outline-dark mt-auto" id="btn_like">찜</a> -->
-                    <c:choose>
-                    	<c:when test="${sessionScope.isLike eq true }">
-                    		<a class="btn btn-outline-dark mt-auto" href="CancelMovieLikePro.mv?member_id=${sessionScope.sId }&movie_idx=${movie.movie_idx}">찜해제</a>
-                    	</c:when>
-                    	<c:otherwise>
-                   			<a class="btn btn-outline-dark mt-auto" href="MovieLikePro.mv?member_id=${sessionScope.sId }&movie_idx=${movie.movie_idx}">찜</a>
-                    	</c:otherwise>
-                    </c:choose>
+<%--                     <c:choose> --%>
+<%--                     	<c:when test="${sessionScope.isLike eq true }"> --%>
+<%--                     		<a class="btn btn-outline-dark mt-auto" href="CancelMovieLikePro.mv?member_id=${sessionScope.sId }&movie_idx=${movie.movie_idx}">찜해제</a> --%>
+<%--                     	</c:when> --%>
+<%--                     	<c:when test="${sessionScope.isLike eq false }"> --%>
+<%--                    			<a class="btn btn-outline-dark mt-auto" href="MovieLikePro.mv?member_id=${sessionScope.sId }&movie_idx=${movie.movie_idx}">찜</a> --%>
+<%--                     	</c:when> --%>
+<%--                     </c:choose> --%>
                    
                    <!-- 에이젝스로 바꿀거~~ -->
 <%--                     <c:choose> --%>

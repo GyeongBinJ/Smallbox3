@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import action.Action;
+import action.AdminMovieListProAction;
+import action.CancelMovieLikeProAction;
+import action.CheckMovieLikeProAction;
+import action.MovieLikeListProAction;
+import action.MovieLikeProAction;
 import action.MovieListProAction;
 import vo.ActionForward;
 
@@ -29,12 +34,15 @@ public class MovieFrontController extends HttpServlet {
 //			System.out.println("controller : movie list");
  			action = new MovieListProAction();
 			forward = action.execute(request, response);
-//		} else if(command.equals("/MovieLikePro.mv")) { // 찜 작업 수행
-// 			action = new MovieLikeProAction();
-//			forward = action.execute(request, response);
-//		} else if(command.equals("/CancelMovieLikePro.mv")) { // 찜 해제 작업 수행
-// 			action = new CancelMovieLikeProAction();
-//			forward = action.execute(request, response);
+		} else if(command.equals("/MovieLikePro.mv")) { // 찜 작업 수행
+ 			action = new MovieLikeProAction();
+			forward = action.execute(request, response);
+		} else if(command.equals("/CancelMovieLikePro.mv")) { // 찜 해제 작업 수행
+ 			action = new CancelMovieLikeProAction();
+			forward = action.execute(request, response);
+		} else if(command.equals("/CheckMovieLikePro.mv")) { // 찜 여부 확인 작업 수행
+ 			action = new CheckMovieLikeProAction();
+			forward = action.execute(request, response);
 		} 
 		
 		// ----------------------------------------------------------------------

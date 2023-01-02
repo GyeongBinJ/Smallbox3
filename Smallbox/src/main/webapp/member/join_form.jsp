@@ -6,12 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 가입</title>
-<link href="css/default.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<header>
-		<jsp:include page="../inc/top.jsp"></jsp:include>
-	</header>
 	<h1>회원 가입</h1>
 	<form action="MemberJoinPro.sm" method="post" name="joinForm">
 		<table border="1">
@@ -53,20 +49,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td>가입날짜</td>
-				<td>
-					<input type="date" name="member_join_date" required="required"> 
-				</td>
-			</tr>
-			<tr>
 				<td>생년월일</td>
 				<td>
 					<input type="date" name="member_birth_date" required="required"> 
 				</td>
-			</tr>
-			<tr>
-				<td>보유 적립금</td>
-				<td><input type="number" name="member_point"></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">

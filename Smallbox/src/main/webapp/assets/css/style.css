@@ -8,102 +8,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-* {
-	font-family: 'malgun gothic';
-}
-
-form {
-	padding: 150px 150px
-}
-
-#content.cols-d {
-	width: 583px;
-	min-width: 583px;
-}
-
-.f {
-	position: relative;
-	margin: 0;
-	padding: 0;
-	color: #666;
-}
-
-.f p {
-	width: 100%;
-	margin: 0 0 13px;
-	font-size: 1.3em;
-	text-align: center;
-	margin-top: 20px;
-}
-
-.f p:after {
-	content: "";
-	display: block;
-	overflow: hidden;
-	clear: both;
-	height: 0;
-}
-
-.f textarea {
-	position: relative;
-	width: 570px;
-	height: 118px;
-	min-height: 118px;
-	padding: 3px 3px 3px 6px;
-	border: 1px solid #ececec;
-	border-top-color: #e1e1e1;
-	border-left-color: #e1e1e1;
-	background: #ececec;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-}
-
-.scheme-g {
-	margin: 26px 0 8px;
-	padding: 0px;
-	font-size: 1.2em;
-	font-weight: 100;
-}
-
-.button_big {
-	float: right;
-	border: 0;
-	border-radius: 3px;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 12px;
-	font-weight: bold;
-	line-height: 24px;
-	margin-left: 5px;
-	padding: 8px 16px;
-	text-decoration: none;
-	color: #fff;
-	background: #0080ff;
-	text-shadow: 1px 1px 1px #0066cc;
-	-webkit-transition: all 0.2s ease-out;
-}
-.button {
-	float: right;
-	border: 0;
-	border-radius: 3px;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 12px;
-	font-weight: bold;
-	line-height: 24px;
-	margin-left: 5px;
- 	padding: 8px 16px;
-	text-decoration: none;
-	color: #fff;
-	background: #0080ff;
-	text-shadow: 1px 1px 1px #0066cc;
-	-webkit-transition: all 0.2s ease-out;
-}
-
-form {
-	padding : 150px 150px
-}
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -282,8 +186,8 @@ h6 {
 }
 
 .navbar .dropdown ul a {
-	padding: 10px 20px;
-	text-transform: none;
+  padding: 10px 20px;
+  text-transform: none;
 }
 
 .navbar .dropdown ul a i {
@@ -461,7 +365,7 @@ h6 {
 
 #hero .carousel-item::before {
   content: "";
-  background-color: rgb(43, 0, 85, 0.8);
+  background-color: rgba(45, 103, 60, 0.8);
 }
 
 #hero .carousel-container {
@@ -565,7 +469,7 @@ h6 {
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  background: rgb(192, 130, 255);
+  background: #3B0B5F;
 }
 
 #hero .btn-get-started:hover {
@@ -1419,7 +1323,7 @@ section {
 
 @media (max-width: 992px) {
   .breadcrumbs {
-    margin-top: 66px;
+    margin-top: 10px;
   }
 }
 
@@ -1529,4 +1433,5 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
 
